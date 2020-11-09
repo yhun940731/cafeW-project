@@ -87,3 +87,63 @@ body {
 
 /* --------------------------------------------
   * 푸터 디자인 */
+  /* flex로 수직 정렬 */
+.footer {
+  background-color: var(--grayscale-black);
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: var(--grayscale-white);
+}
+.footer-guide-list {
+  background-color: var(--grayscale-black);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 82px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 252, 249, .2);
+  border-bottom: 1px solid rgba(255, 252, 249, .2);
+}
+.footer-guide-list a {
+  margin: 0 30px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 82px;
+  /* 수직 정렬 line-height trick */
+  white-space: nowrap;
+  opacity: .6;
+}
+/* 푸터 메뉴 키보드 포커스 및 마우스 오버 시 text opacity 변경 */
+.footer-guide-list a:focus, 
+.footer-guide-list a:hover {
+  opacity: 1;
+}
+.footer-brand {
+  background-color: crimson;
+  width: 77px;
+  height: 90px;
+  margin: 40px 0;
+}
+.footer-address {
+  text-align: center;
+  font-style: normal;
+  opacity: .6;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+/* 줄바꿈 */
+.white-space {
+  display: block;
+}
+.copyright {
+  margin-bottom: 60px;
+  opacity: .6;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 21px;
+}
