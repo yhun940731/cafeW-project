@@ -1,9 +1,84 @@
 /* 본문 내 헤더, 메인 콘텐츠, 푸터 배치를 위한 body 레이아웃 */
 body {
-  background-color: yellow;
 }
+
 /* --------------------------------------------
   * 헤더 디자인 */
+.app-header {
+  position: relative;
+  background-color: #282725;
+  color: #FFFCF9;
+}
+
+.logo {
+  text-align: center;
+}
+
+.sign {
+  position: absolute;
+  top: 0;
+  left: 109px;
+}
+
+.sign li {
+  padding: 10px;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+.search-form {}
+
+.search-form-container input{
+  position: absolute;
+  top: 0;
+  right: 120px;
+  width: 252px;
+  height: 40px;
+  border: 0;
+  margin: 21px 0;
+  background-color: transparent;
+}
+
+.btn-search {
+  position: absolute;
+  top: 21px;
+  right: 120px;
+}
+.menu{
+  margin: 0;
+  padding: 47px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+.menu-item{
+  width: 180px;
+  display: inline-block;
+  margin-right: 64px;
+}
+
+
+.menu-button{
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 17px;
+}
+
+.sub-menu{
+}
+
+.sub-menu li{
+  font-size: 1.5rem;
+  padding-bottom: 7px;
+}
+
+/* --------------------------------------------
+  * 네비게이션 디자인 */
+.navigation {
+  background-color: #282725;
+  color: #FFFCF9
+}
 
 
 /* --------------------------------------------
@@ -12,4 +87,3 @@ body {
 
 /* --------------------------------------------
   * 푸터 디자인 */
-
