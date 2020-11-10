@@ -10,26 +10,26 @@ body {
   color: var(--grayscale-white);
 }
 
-.logo {
+.header__logo {
   text-align: center;
   margin: 0;
 }
 
-.sign {
+.header__sign {
   position: absolute;
   top: 0;
   left: 109px;
 }
 
-.sign li {
+.header__sign li {
   padding: 10px;
   display: inline-block;
   font-size: 1.6rem;
 }
 
-.search-form {}
+.header__search-form {}
 
-.search-form-container input{
+.search-container input{
   width: 252px;
   height: 40px;
   position: absolute;
@@ -40,13 +40,14 @@ body {
   background-color: transparent;
 }
 
-.btn-search {
+.search-container__btn-search {
   position: absolute;
   top: 21px;
   right: 120px;
 }
 
-nav .menu{
+.navigation__menu{
+  margin: 0;
   padding: 47px 120px;
 }
 
