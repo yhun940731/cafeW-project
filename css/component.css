@@ -33,10 +33,10 @@ legend {
 }
 
 /* 기본 레이아웃 */
-.app-header-container,
+.app-header,
 .app-navigation,
 .app-main,
-.app-footer-container {
+.app-footer {
   width: 100%;
 }
 
