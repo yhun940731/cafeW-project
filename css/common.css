@@ -4,7 +4,7 @@ body {
 
 /* --------------------------------------------
   * 헤더 디자인 */
-.app-header {
+.header {
   position: relative;
   background-color: var(--grayscale-black);
   color: var(--grayscale-white);
@@ -12,6 +12,7 @@ body {
 
 .logo {
   text-align: center;
+  margin: 0;
 }
 
 .sign {
@@ -75,7 +76,7 @@ nav .menu{
   * 네비게이션 디자인 */
 .navigation {
   background-color: var(--grayscale-black);
-  color: var(--grayscale-white)
+  color: var(--grayscale-white);
 }
 
 
