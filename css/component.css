@@ -34,6 +34,7 @@ legend {
 
 /* 기본 레이아웃 */
 .app-header-container,
+.app-navigation,
 .app-main,
 .app-footer-container {
   width: 100%;
@@ -45,4 +46,9 @@ legend {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+}
+
+/* 줄바꿈 */
+.white-space {
+  display: block;
 }
