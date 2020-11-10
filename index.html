@@ -18,8 +18,10 @@
 </head>
 
 <body>
+    <!-- 본문 바로가기 -->
     <div class="skip-nav" tabindex="0"><a href="#content">본문 바로가기</a></div>
 
+    <!-- 헤더 영역 -->
     <header class="app-header">
         <h1 class="app-header__logo">
             <a href="./index.html"><img src="#" alt="cafe W"></a>
@@ -30,8 +32,8 @@
             <li><a href="./views/signup-fds.html">Sign Up</a></li>
         </ul>
 
+        <!-- 헤더 검색 영역 -->
         <h2 class="a11y-hidden">검색</h2>
-
         <form class="app-header__search-form" action="https://formspree.io/f/meqpzjke" method="POST">
             <fieldset>
                 <legend>검색폼</legend>
@@ -44,6 +46,7 @@
         </form>
     </header>
 
+    <!-- 네비게이션 영역 -->
     <nav class="app-navigation">
         <h2 class="a11y-hidden">메인 메뉴</h2>
         <ul class="app-navigation__menu">
@@ -122,6 +125,7 @@
 
     <!-- 메인 -->
     <main class="app-main">
+        <!-- 공지사항 -->
         <div class="notice-info" id="noticeInfo">
             <h2 class="a11y-hidden">공지사항</h2>
             <p class="notice-info__brief">
@@ -131,6 +135,7 @@
             <button type="button" class="button-close" aria-label="닫기"></button>
         </div>
 
+        <!-- 추천 메뉴 섹션 -->
         <div class="recommend-beverage-container">
             <section class="recommend-beverage">
                 <h2 class="a11y-hidden">W 카페의 추천 메뉴</h2>
@@ -164,9 +169,11 @@
         </div>
 
 
+        <!-- 추천 강좌 섹션 -->
         <div class="slide-container">
             <h2 class="a11y-hidden">추천 강좌</h2>
             <section class="recommend-class-multicampus">
+                <!-- 멀티 캠퍼스 추천 강좌 -->
                 <h3 class="tab class-heading" id="multicampus-heading"><a href="#" role="button">멀티 캠퍼스 추천 강좌</a></h3>
                 <ul class="class-list">
                     <li class="class-list__item">
@@ -300,6 +307,7 @@
                 </ul>
             </section>
 
+            <!-- 이듬 블랜디드 러닝 추천 강좌 -->
             <section class="recommend-class-euid">
                 <h3 class="tab class-heading" id="euid-heading"><a href="#" role="button">이듬 블랜디드 러닝 추천 강좌</a></h3>
                 <ul class="class-list">
@@ -435,7 +443,9 @@
             </section>
         </div>
 
+        <!-- 강좌 관련 컨테이너 -->
         <div class="contents-container">
+            <!-- 강좌 리뷰 섹션 -->
             <section class="contents-review">
                 <h2 class="a11y-hidden">강좌 리뷰</h2>
                 <div id="reviewSlider">
@@ -453,6 +463,7 @@
                 <button type="button" class="contents-review__change-btn" aria-label="이전 강좌 보기"></button>
             </section>
 
+            <!-- 인기 강좌 섹션 -->
             <section class="favorite contents">
                 <h2 class="favorite-heading">카페 W 인기 강좌</h2>
                 <ol class="favorite-list">
@@ -464,10 +475,13 @@
                 <a class="favorite-more" href="#" aria-label="인기 강좌 더보기"></a>
             </section>
 
+            <!-- 브로슈어 다운로드 부분 -->
             <div class="brochure">
                 <a href="#">브로슈어 다운받기</a>
             </div>
         </div>
+
+        <!-- 유튜브 영상 섹션 -->
         <div class="video-container">
             <section class="wcafe-youtube">
                 <h2 class="a11y-hidden">W Cafe 유튜브 영상</h2>
@@ -489,6 +503,7 @@
             </section>
         </div>
 
+         <!-- 메뉴 종류 섹션 -->
         <div class="various-menu-container">
             <section class="various-menu">
                 <h2 class="a11y-hidden">메뉴 종류</h2>
@@ -509,6 +524,7 @@
             </section>
         </div>
 
+         <!-- 커피 랩 섹션 -->
         <div class="coffee-lab-container">
             <section class="coffee-lab">
                 <h2 class="coffee-lab__heading">CAFE W <em>COFFEE LAB</em></h2>
@@ -518,6 +534,7 @@
             </section>
         </div>
 
+         <!-- 이듬 블랜디드 러닝 소개 섹션 -->
         <div class="curriculum-info__container">
             <section class="curriculum-info">
                 <div class="curriculum-info--front">
@@ -532,6 +549,7 @@
             </section>
         </div>
 
+         <!-- 매장 찾기 섹션 -->
         <div class="find-store__container">
             <section class="find-store">
                 <h2 class="a11y-hidden">매장찾기</h2>
@@ -549,8 +567,6 @@
         </div>
 
     </main>
-
-
 
     <!-- 푸터 -->
     <footer class="app-footer">
