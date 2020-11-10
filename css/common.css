@@ -88,8 +88,6 @@ nav .menu{
   /* flex로 수직 정렬 */
 .footer {
   background-color: var(--grayscale-black);
-  width: 1440px;
-  margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -120,7 +118,6 @@ nav .menu{
   opacity: 1;
 }
 .footer-brand {
-  background-color: crimson;
   width: 77px;
   height: 90px;
   margin: 40px 0;
