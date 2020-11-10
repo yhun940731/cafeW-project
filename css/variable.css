@@ -1,5 +1,10 @@
 /*색상변수*/
 :root {
+    --main-color-gold: #7D6F5D;
+    --main-color-pale-brown: #A37356;
+    --main-color-deep-oak: #412311;
+    --main-color-don-juan: rgba(95, 76, 76, 0.9);
+    --main-color-terra-cotta: #E27762;
     --grayscale-black: #282725;
     --grayscale-light-gray: #CFCCC7;
     --grayscale-white: #FFFCF9;
