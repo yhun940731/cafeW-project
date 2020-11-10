@@ -6,8 +6,8 @@ body {
   * 헤더 디자인 */
 .app-header {
   position: relative;
-  background-color: #282725;
-  color: #FFFCF9;
+  background-color: var(--grayscale-black);
+  color: var(--grayscale-white);
 }
 
 .logo {
@@ -29,13 +29,13 @@ body {
 .search-form {}
 
 .search-form-container input{
+  width: 252px;
+  height: 40px;
   position: absolute;
   top: 0;
   right: 120px;
-  width: 252px;
-  height: 40px;
-  border: 0;
   margin: 21px 0;
+  border: 0;
   background-color: transparent;
 }
 
@@ -44,18 +44,16 @@ body {
   top: 21px;
   right: 120px;
 }
-.menu{
-  margin: 0;
-  padding: 47px 0;
-  width: 1200px;
-  margin: 0 auto;
+
+nav .menu{
+  padding: 47px 120px;
 }
 
 
 .menu-item{
-  width: 180px;
   display: inline-block;
-  margin-right: 64px;
+  width: 180px;
+  margin-right: 50px;
 }
 
 
@@ -76,8 +74,8 @@ body {
 /* --------------------------------------------
   * 네비게이션 디자인 */
 .navigation {
-  background-color: #282725;
-  color: #FFFCF9
+  background-color: var(--grayscale-black);
+  color: var(--grayscale-white)
 }
 
 
