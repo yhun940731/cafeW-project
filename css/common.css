@@ -83,6 +83,38 @@ body {
 
 /* --------------------------------------------
   * 메인 콘텐츠 섹션 공통 */
+  /* 추천 메뉴 섹션 */
+  /* text-box와 image-box를 flex로 가로 배치함 */
+  .recommend-beverage {
+    background-color: seagreen;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    /* 고정형 레이아웃 */
+    min-width: 1440px;
+  }
+  .text-box {
+    background-color: skyblue;
+    width: 40%;
+  }
+  .image-box {
+    background-color: thistle;
+    width: 60%;
+  }
+  .recommend-beverage__list {
+    background-color: rosybrown;
+    /* 추천 메뉴 list 내의 이미지들 flex로 가로 배치 */
+    display: flex;
+    flex-flow: row nowrap;
+
+  }
+  /* 추천 메뉴 섹션 - 자세히 보기 */
+  .recommend-beverage__more-info {
+    background-color: yellowgreen;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 
 
 /* --------------------------------------------
