@@ -1,6 +1,5 @@
 /* 본문 내 헤더, 메인 콘텐츠, 푸터 배치를 위한 body 레이아웃 */
-body {
-}
+body {}
 
 /* --------------------------------------------
   * 헤더 디자인 */
@@ -29,7 +28,7 @@ body {
 
 .app-header__search-form {}
 
-.search-container input{
+.search-container input {
   width: 252px;
   height: 40px;
   position: absolute;
@@ -53,29 +52,28 @@ body {
   color: var(--grayscale-white);
 }
 
-.app-navigation__menu{
+.app-navigation__menu {
   margin: 0;
   padding: 47px 120px;
 }
 
 
-.menu-item{
+.menu-item {
   display: inline-block;
   width: 180px;
   margin-right: 64px;
 }
 
 
-.menu-button{
+.menu-button {
   display: block;
   font-size: 2rem;
   margin-bottom: 17px;
 }
 
-.sub-menu{
-}
+.sub-menu {}
 
-.sub-menu li{
+.sub-menu li {
   font-size: 1.5rem;
   padding-bottom: 7px;
 }
@@ -87,7 +85,7 @@ body {
 
 /* --------------------------------------------
   * 푸터 디자인 */
-  /* flex로 수직 정렬 */
+/* flex로 수직 정렬 */
 .app-footer {
   background-color: var(--grayscale-black);
   display: flex;
@@ -95,6 +93,7 @@ body {
   align-items: center;
   color: var(--grayscale-white);
 }
+
 .app-footer__guide-list {
   background-color: var(--grayscale-black);
   display: flex;
@@ -105,6 +104,7 @@ body {
   border-top: 1px solid rgba(255, 252, 249, .2);
   border-bottom: 1px solid rgba(255, 252, 249, .2);
 }
+
 .app-footer__guide-list a {
   margin: 0 30px;
   font-size: 1.6rem;
@@ -114,16 +114,19 @@ body {
   white-space: nowrap;
   opacity: .6;
 }
+
 /* 푸터 메뉴 키보드 포커스 및 마우스 오버 시 text opacity 변경 */
-.app-footer__guide-list a:focus, 
+.app-footer__guide-list a:focus,
 .app-footer__guide-list a:hover {
   opacity: 1;
 }
+
 .app-footer__brand {
   width: 77px;
   height: 90px;
   margin: 40px 0;
 }
+
 .app-footer__address {
   text-align: center;
   font-style: normal;
@@ -140,4 +143,179 @@ body {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 21px;
+}
+
+
+
+/* section 3 디자인 */
+
+.contents-container {
+  min-width:1440px;
+  height: 460px;
+  display: flex;
+  background-color: #7D6F5D;
+}
+
+.contents-review {
+  width: 743px;
+  height: 400px;
+  background: #282725;
+  margin-left: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.favorite-contents {
+  width:459px;
+  height: 220px;
+  background: #FFFCF9;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+.brochure {
+  width:459px;
+  height: 160px;
+  background: #E27762;
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-bottom: 30px;
+}
+
+.review-heading {
+  color:#FFFCF9;
+  height: 43px;
+  width: 291px;
+  margin:0;
+  padding:0;
+  border:0;
+  margin-left:91px;
+  margin-top:90px;
+}
+.review-heading::before{
+  content:"";
+  display:block;
+  width:40px;
+  height:10px;
+  border:0;
+  border-top:1px solid white;
+  position:relative;
+  top:-30px;
+
+
+}
+.review-brief {
+  color:#FFFCF9;
+  margin-left:91px;
+  margin-top:10px;
+  margin-right:167px;
+  font-weight:400;
+  font-size:13px;
+  color:#FFFCF9;
+  
+}
+
+.contents-review__change-btn {
+  background: tomato;
+}
+.review-brief footer{
+  margin-top:14px;
+}
+.rating::before{
+  content: "";
+  display:inline-block;
+  width:110px;
+  height:20px;
+  background: url(../image/main_screen_2/star_rating.svg) repeat;
+}
+
+
+/* section 7 */
+.coffee-lab-container{
+ min-width:1440px;
+ height:1192px;
+ background:#FFFCF9;
+}
+.coffee-lab{
+  position:relative;
+}
+.coffee-lab__heading{
+  width:484px;
+  height:144px;
+  margin:0 auto;
+  text-align:center;
+  line-height:144px;
+  font-weight:700;
+  font-size:46px;
+}
+.coffee-lab__brief{
+  width:449px;
+  height:25px;
+  margin:0 auto;
+  margin-top:8px;
+  text-align:center;
+  line-height:25px;
+  font-weight:700;
+  font-size:18px;
+
+}
+.coffee-lab__brief::after{
+  content:"";
+  display:block;
+  width:50px;
+  height:10px;
+  border:0;
+  border-top:1px solid black;
+  position:relative;
+  top:50px;
+  left:190px;
+}
+
+.coffee-lab__lab-menu{
+  width: 692px;
+  height: 692px;
+  background:url(../image/image-png/front-image.png) no-repeat;
+  position:absolute;
+  top:287px;
+  left:120px;
+  z-index:1;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:flex-end;
+  align-items:center;
+}
+.coffee-lab__lab-barista{
+  width:692px;
+  height:692px;
+  background:url(../image/image-png/back-image.png) no-repeat;
+  position:absolute;
+  top:420px;
+  right:120px;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.coffee-lab__lab-menu a,
+.coffee-lab__lab-barista a{
+ color:#FFFCF9;
+ margin-bottom:150px;
+ font-weight:700;
+ font-size:32px;
+ text-align: center;
+}
+.coffee-lab__lab-menu a::after{
+  content:"";
+  display:block;
+  width:180px;
+  margin-top:10px;
+  border-top:10px solid #FFFCF9;
+}
+.coffee-lab__lab-barista a::after{
+  content:"";
+  display:block;
+  width:220px;
+  margin-top:10px;
+  border-top:10px solid #FFFCF9;
 }
