@@ -37,7 +37,8 @@ legend {
 .app-navigation,
 .app-main,
 .app-footer {
-  width: 100%;
+  min-width: 1440px;
+  margin: 0 auto;
 }
 
 /* 목록 요소 기본 스타일 초기화 */
