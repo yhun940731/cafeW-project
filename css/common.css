@@ -276,6 +276,7 @@
 }
 
 /* 유튜브 영상 섹션 #4 */
+/* 섹션 배경 이미지 추가 */
 .wcafe-youtube {
   position: relative;
   height: 590px;
@@ -286,10 +287,12 @@
   background-position: 7% 50%, 93% 50%;
 }
 
+/* 위 섹션과의 마진 없애기 */
 .wcafe-youtube-wrapper {
   margin: 0;
 }
 
+/* iframe 크기 및 위치 조정 */
 .wcafe-youtube-wrapper iframe {
   width: 960px;
   height: 540px;
@@ -301,6 +304,7 @@
 }
 
 /* 메뉴 종류 섹션 #5 */
+/* 배경화면 설정 및 전체 폰트 색상 적용*/
 .promotion-info {
   position: relative;
   height: 458px;
@@ -310,155 +314,160 @@
   color: var(--main-color-pale-brown);
 }
 
+/* 문단 위치 설정 */
 .brief-wrap {
   position: absolute;
   left: 15%;
   top: 15%;
 }
 
+/* 문단 좌측 이미지 적용 및 위치 지정 */
 .brief-wrap::before {
-  position: absolute;
-  top: 75px;
-  left: -100px;
   content: "";
   display: block;
   width: 70px;
   height: 95px;
   background-image: url(../image/main_screen_5/StarSymbol.svg);
   background-repeat: no-repeat;
+  position: absolute;
+  top: 75px;
+  left: -100px;
 }
 
+/* 전체 폰트 디자인 */
 .promotion-info__brief {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
+/* em 스타일 변경 */
 .promotion-info__brief em {
   font-style: normal;
 }
 
+/* 영문 폰트 스타일 설정 */
 .promotion-info__brief[lang="en"] {
   font-weight: 700;
   font-size: 1.8rem;
   letter-spacing: 15%;
 }
-
 .promotion-info__brief[lang="en"] em {
   font-weight: 400;
   font-size: 2.6rem;
-  letter-spacing: 5%;
 }
 
+/* 버튼 디자인 */
 .promotion-info a {
+  display: block;
   width: 128px;
   height: 36px;
-  padding: 10px 25px;
-  text-align: center;
-  display: block;
-  margin-top: 30;
-  border: 2px solid var(--main-color-pale-brown);
-  border-radius: 3px;
   font-size: 1.6rem;
   font-weight: bold;
   font-style: normal;
+  text-align: center;
   padding: 5px 13px;
+  margin-top: 30;
+  border: 2px solid var(--main-color-pale-brown);
+  border-radius: 3px;
 }
 
 /* 이듬 블랜디드 러닝 소개 섹션 #8 */
+/* 배경 적용 및 전체 폰트 색상 적용 */
 .curriculum-info {
   position: relative;
   height: 540px;
+  color: var(--main-color-gold);
   background: var(--main-color-pale-brown) url(../image/image-png/backgroundfinal.png) no-repeat;
   background-size: cover;
   background-position: 0;
-  color: var(--main-color-gold);
 }
 
-.curriculum-info--front {
+/* 과정 상세 내용 영역 디자인(뒷면) */
+.curriculum-info--back {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 180px;
   position: absolute;
   top: 45%;
   left: 48%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 180px;
-  height: 180px;
   background-color: var(--grayscale-white);
   box-shadow: 0px 0px 15px rgba(103, 48, 25, 0.3);
+  border-radius: 50%;
   overflow: hidden;
 }
 
-.curriculum-info--front:hover {
-  position: absolute;
-  top: 35%;
-  left: 45%;
+/* hover일 경우 크기 증가 */
+.curriculum-info--back:hover {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
   width: 300px;
   height: 300px;
+  position: absolute;
+  top: 35%;
+  left: 45%;
   background-color: var(--grayscale-white);
   box-shadow: 0px 0px 15px rgba(103, 48, 25, 0.3);
+  border-radius: 50%;
 }
 
+/* 제목 영역 스타일 */
 .curriculum-info__heading {
   font-weight: 700;
   font-size: 2.6rem;
 }
 
+/* 내용 본문 영역 스타일 */
 .curriculum-info__brief {
   margin: 0;
-  width: 253px;
+  width: 240px;
   text-align: center;
-  font-weight: 400;
   font-size: 1.6rem;
+  font-weight: 400;
 }
-
 .curriculum-info__brief em {
   font-style: normal;
 }
-
-.curriculum-info--front a {
-  font-weight: 700;
-  font-size: 1.6rem;
-  margin-top: 20px;
-  padding: 5px 13px;
+/* 과정 보기 버튼 스타일 */
+.curriculum-info--back a {
   display: block;
+  width: 128px;
+  height: 36px;
+  padding: 5px 13px;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
   text-align: center;
   border: 2px solid var(--main-color-gold);
   border-radius: 3px;
-  width: 128px;
-  height: 36px;
 }
-
-.curriculum-info--back {
+/* 앞면 위치 지정 및 스타일 */
+.curriculum-info--front {
   position: absolute;
   top: 45%;
   left: 48%;
-  border-radius: 50%;
   width: 180px;
   height: 180px;
   background-color: var(--grayscale-white);
   box-shadow: 0px 0px 15px rgba(103, 48, 25, 0.3);
+  border-radius: 50%;
 }
-
-.curriculum-info--back img {
+/* 이미지 스타일 적용 */
+.curriculum-info--front img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.curriculum-info--back:hover {
-  z-index: -1;
-}
-
-.curriculum-info--front:hover+.curriculum-info--back {
+/* 앞면에 hover할 경우 후면과 교체하기 위한 index 조정 */
+.curriculum-info--front:hover,
+.curriculum-info--back:hover+.curriculum-info--front {
   z-index: -1;
 }
 
