@@ -1,0 +1,6 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css); /*SpoqaHanSans*/
+@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+@import url(./common.css); /*헤더 본문 푸터 공통 디자인*/
+@import url(./component.css); /*전역 공통 클래스 정의*/
+@import url(./default.css); /*기본 스타일 정의*/
+@import url(./variable.css); /*색상변수 정의*/

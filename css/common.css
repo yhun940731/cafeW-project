@@ -1,0 +1,681 @@
+/* 본문 내 헤더, 메인 콘텐츠, 푸터 배치를 위한 body 레이아웃 */
+body {}
+
+/* --------------------------------------------
+  * 헤더 디자인 */
+.app-header {
+  position: relative;
+  background-color: var(--grayscale-black);
+  color: var(--grayscale-white);
+}
+
+.app-header__logo {
+  text-align: center;
+  margin: 0;
+}
+
+.app-header__sign {
+  position: absolute;
+  top: 0;
+  left: 109px;
+}
+
+.app-header__sign li {
+  padding: 10px;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+.app-header__search-form {}
+
+.search-container input {
+  width: 252px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 120px;
+  margin: 21px 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.search-container__btn-search {
+  position: absolute;
+  top: 21px;
+  right: 120px;
+}
+
+/* --------------------------------------------
+  * 네비게이션 디자인 */
+.app-navigation {
+  background-color: var(--grayscale-black);
+  color: var(--grayscale-white);
+}
+
+.app-navigation__menu {
+  margin: 0;
+  padding: 47px 120px;
+}
+
+
+.menu-item {
+  display: inline-block;
+  width: 180px;
+  margin-right: 64px;
+}
+
+
+.menu-button {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 17px;
+}
+
+.sub-menu {}
+
+.sub-menu li {
+  font-size: 1.5rem;
+  padding-bottom: 7px;
+}
+
+
+/* --------------------------------------------
+  * 메인 콘텐츠 섹션 공통 */
+  /* 추천 메뉴 섹션 */
+  /* text-box와 image-box를 flex로 가로 배치함 */
+  .recommend-beverage {
+    background-color: var(--main-color-choux);
+    display: flex;
+    flex-flow: row wrap;
+    /* 고정형 레이아웃 */
+    min-width: 1440px;
+    /* 음료이미지 position: absolute;로 배치할 때 BFC로 인해 레이아웃 무너지므로 고정 height값 부여 */
+    height: 600px;
+    position: relative;
+    /* 더보기 버튼 배치 기준 */
+  }
+  /* 추천 메뉴 섹션 - text-box */
+  .text-box {
+    width: 40%;
+  }
+  .recommend-beverage__text {
+    color: var(--main-color-pale-brown);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+  }
+  .recommend-beverage__text[lang="en"] {
+    font-size: 40px;
+    /* 시안에 맞춰 자간 조정 */
+    letter-spacing: 4px;
+    margin: 83px 0 10px;
+  }
+  .recommend-beverage__text em {
+    color: var(--main-color-terra-cotta);
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 700;
+    /* 시안에 맞춰 자간 조정 */
+    letter-spacing: 9px;
+  }
+  /* of 상하 여백 조정 */
+  .recommend-beverage__text span {
+    margin: 7px 0 13px;
+  }
+  /* of 좌측, 우측 구분선 생성 */
+  .recommend-beverage__text span::before, 
+  .recommend-beverage__text span::after {
+    content: "";
+    display: inline-block;
+    width: 160px;
+    height: 2px;
+    background-color: var(--main-color-pale-brown);
+  }
+  /* of 좌측, 우측 구분선 배치 */
+  .recommend-beverage__text span::before, 
+  .recommend-beverage__text span::after {
+    margin-bottom: 11px;
+  }
+  .recommend-beverage__text span::before {
+    margin-right: 13px;
+  }
+  .recommend-beverage__text span::after {
+    margin-left: 13px;
+  }
+  /* text-box 하단 구분선 */
+  .recommend-beverage__text:nth-child(2)::after {
+    content: "";
+    display: inline-block;
+    width: 400px;
+    height: 2px;
+    background-color: var(--main-color-pale-brown);
+    /* 배치 - inline-block 요소로 선언하여, text-align값 상속받아 중앙 정렬됨 */
+  }
+  .image-box {
+    width: 60%;
+  }
+  /* 추천 메뉴 섹션 - image-box */
+  .recommend-beverage__list {
+    /* 추천 메뉴 list 내의 이미지들 flex로 가로 배치 */
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+  }
+  /* 각각의 음료 이미지 배치 */
+  .recommend-beverage__list__item {
+    position: absolute;
+    /* 배치 기준 - li.recommend-beverage__list */
+  }
+  .recommend-beverage__list__item:nth-child(1) {
+    top: 113px;
+    left: -95px;
+  }
+  .recommend-beverage__list__item:nth-child(2) {
+    top: 62px;
+    left: 193px;
+  }
+  .recommend-beverage__list__item:nth-child(3) {
+    top: 242px;
+    left: 476px;
+  }
+  /* 각 음료 이미지의 메뉴이름 배치 */
+  .recommend-beverage__list__item:nth-child(1) p, 
+  .recommend-beverage__list__item:nth-child(2) p, 
+  .recommend-beverage__list__item:nth-child(3) p {
+    position: absolute;
+    margin: 0;
+  }
+  .recommend-beverage__list__item:nth-child(1) p {
+    top: 360px;
+    left: -5px;
+  }
+  .recommend-beverage__list__item:nth-child(2) p {
+    top: 3px;
+    left: -20px;
+  }
+  .recommend-beverage__list__item:nth-child(3) p {
+    top: -55px;
+    left: 36px;
+  }
+  /* 각 음료 이미지의 메뉴이름 스타일링 */
+  .recommend-beverage__list__item p {
+    /* 국문 */
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    color: var(--main-color-don-juan);
+  }
+  .recommend-beverage__list__item p > span {
+    /* 영문 */
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--main-color-deep-oak);
+    letter-spacing: 3px;
+    white-space: nowrap;
+  }
+  .recommend-beverage__list__item em {
+    /* 줄바꿈 - .white-space */
+    /* italic 효과 제거 */
+    font-style: normal;
+    /* 국문과의 간격 조정 */
+    margin-bottom: 7px;
+  }
+  /* 추천 메뉴 섹션 - 자세히 보기 */
+  .recommend-beverage__more-info {
+    position: absolute;
+    /* 배치 기준 section.recommend-beverage */
+    left: 227px;
+    top: 461px;
+    /* 버튼 모양 꾸미기 */
+    width: 128px;
+    height: 36px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color-terra-cotta);
+    /* text 수평 정렬 */
+    text-align: center;
+    /* line-height trick으로 text 수직 정렬 */
+    line-height: 36px;
+    /* text 꾸미기 */
+    color: var(--main-color-terra-cotta);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+
+  /* 추천 강좌 섹션 */
+  .slide-container {
+    position: relative;
+    overflow: hidden;
+  }
+  /* 각 섹션 기본 디자인 */
+  .slide-container section.is-active {
+    padding-top: 104px;
+    /* 탭 버튼과 강의목록 사이 여백 부여 */
+  }
+  .recommend-class-multicampus {
+    background-color: var(--grayscale-white);
+  }
+  .recommend-class-euid {
+    background-color: var(--grayscale-black);
+  }
+  /* 드러내기(.is-active는 section에만 부여) */
+  .is-active .class-list,
+  .is-active .class-list__btn-class,
+  .is-active .class-list__btn-slide {
+    display: block;
+  }
+  /* 감추기 */
+  .class-list,
+  .class-list__btn-class,
+  .class-list__btn-slide {
+    display: none;
+  }
+  /* 탭 배치 */
+  .tab {
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+  .multicampus-class-heading {
+    left: 0;
+  }
+  .euid-class-heading {
+    left: 830px;
+    width: 800px;
+  }
+  /* 탭 디자인 */
+  .tab a {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 22px 0 26px;
+  }
+  .tab em {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .multicampus-class-heading a {
+    background: var(--grayscale-white) url(../image/main_screen_1/ChevronUp.svg) no-repeat 793px 47%;
+    /* 탭에 화살표 아이콘 삽입 */
+    color: var(--grayscale-black);
+    padding-left: 624px;
+    padding-right: 64px;
+  }
+  .euid-class-heading a {
+    background: var(--grayscale-black) url(../image/main_screen_1/ChevronDown.svg) no-repeat 568px 47%;
+    /* 탭에 화살표 아이콘 삽입 */
+    color: var(--grayscale-white);
+    padding-left: 353px;
+    padding-right: 163px;
+  }
+  /* 강의 목록 */
+  /* 강의 목록 배치 */
+  .is-active .class-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  /* 강의 목록 디자인 */  
+  .class-list__item {
+    color: var(--grayscale-white);
+    width: 387px;
+    height: 424px;
+    border-radius: 6px;
+    margin-right: 20px;
+    text-align: center;
+    /* 강의 목록 hover할 때 그림자 효과 자연스럽게 주기 위함 */
+    transition: box-shadow .3s;
+    position: relative;
+    /* 강의 정보(detail) 모달창 배치 기준 */
+  }
+  .class-list__item:nth-child(1) {
+    background: var(--grayscale-black) url(../image/image-png/background1.png) no-repeat 0 0 / 100%;
+  }
+  .class-list__item:nth-child(2) {
+    background: var(--grayscale-black) url(../image/image-png/background2.png) no-repeat 0 0 / 100%;}
+  .class-list__item:nth-child(3) {
+    background: var(--grayscale-black) url(../image/image-png/background5.png) no-repeat 0 0 / 100%;}
+    /* 강의 목록 text 꾸미기 */
+    .class-item__title, 
+    .class-item__brief {
+      margin: 0;
+    }
+    .class-item__title {
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-top: 241px;
+      margin-bottom: 9px;
+    }
+    .class-item__brief {
+      font-size: 21px;
+      line-height: 21px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    /* 강의 정보 버튼 꾸미기 */
+    .class-list__item button[aria-haspopup="dialog"] {
+      cursor: pointer;
+      border: 3px solid var(--grayscale-white);
+      border-radius: 5px;
+      background-color: transparent;
+      color: var(--grayscale-white);
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 700;
+      padding: 10px 25px;
+      /* 아래 효과 자연스럽게 적용 */
+      transition: all .3s ease;
+    }
+    /* 강의 정보 버튼 꾸미기 - 마우스오버 및 키보드포커스 시 효과 */
+    .class-list__item button[aria-haspopup="dialog"]:hover, 
+    .class-list__item button[aria-haspopup="dialog"]:focus {
+      background-color: var(--grayscale-white);
+      color: var(--grayscale-black);
+    }
+    /* 강의 목록 hover할 때 그림자 효과 */
+    .class-list__item:hover {
+      box-shadow: 1px 15px 8px 0 #aaa;
+    }
+    /* 강의 정보(detail) 배치 */
+  .is-active .class-list__item:nth-child(1) div {
+    background: rgba(40,39,37,.95);
+    display: block;
+    width: 387px;
+    height: 424px;
+    border-radius: 6px;
+    position: absolute;
+    /* 배치 기준 : .class-list__item */
+    top: 0;
+    left: 0;
+  }
+    .is-active .class-list__item:nth-child(2) div, 
+    .is-active .class-list__item:nth-child(3) div {
+      display: none;
+    }
+    /* 강의 정보(detail) 꾸미기 */
+    .class-list__item caption {
+      text-align: left;
+      font-size: 25px;
+      line-height: 22px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-top: 35px;
+    }
+    .class-list__item caption span {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 400;
+      letter-spacing: normal;
+      margin-top: 10px;
+      margin-bottom: 74px;
+    }
+    /* 별점 배치 */
+    .class-item__rating {
+      position: absolute;
+      top: 105px;
+      left: 35px;
+    }
+    .class-item__rating img {
+      vertical-align: bottom;
+    }
+    .class-item__rating em {
+      font-style: normal;
+      display: inline-block;
+      margin-left: 11px;
+      line-height: 24px;
+      /* 별과 수직 정렬 맞추기 위해 line-height trick */
+      font-size: 20px;
+      font-weight: 700;
+    }
+    /* 강의 정보(detail) 표 꾸미기 */
+    .class-detail__table {
+      width: 315px;
+      margin: 0 36px;
+      border-top: 1px solid var(--grayscale-white);
+      border-bottom: 1px solid var(--grayscale-white);
+      text-align: left;
+      /* border-collapse: collapse; */
+      border-spacing: 0;
+    }
+    .class-detail__table th, 
+    .class-detail__table td {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      padding: 10px;
+      border-bottom: 1px solid rgba(255,252,249,.3);
+      white-space: pre-line;
+      /* 연속 공백 하나로 합치고, 개행 문자는 줄바꿈 */
+    }
+    .class-detail__table tr {
+      padding: 0;
+    }
+    .class-detail__table th {
+      width: 46px;
+      padding: 6px;
+    }
+    .class-detail__table tr td:nth-child(4) {
+      padding-left: 35px;
+    }
+    /* 강의 정보 패널 닫기 버튼 */
+    .is-close-panel {
+      width: 21px;
+      height: 21px;
+      background: url(../image/main_screen_2/Closebutton.svg) no-repeat 0 0 / 100%;
+      position: absolute;
+      /* 배치 기준 : 모달창 */
+      top: 37px;
+      left: 330px;
+    }
+
+    /* 강의 목록 넘기기 버튼 */
+    .btn-class__prev, 
+    .btn-class__next {
+      border: 0;
+      cursor: pointer;
+      position: absolute;
+      width: 13px;
+      height: 24px;
+    }
+    .btn-class__prev {
+      top: 304px;
+      left: 53px;
+      background: url(../image/main_screen_2/ChevronLeft.svg) no-repeat 0 0 / 100%;
+    }
+    .btn-class__next {
+      top: 304px;
+      right: 53px;
+      background: url(../image/main_screen_2/ChevronRight.svg) no-repeat 0 0 / 100%;
+    }
+    /* 페이지네이션 */
+    .is-active .class-list__btn-slide {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 38px auto;
+      width: 117px;
+      height: 20px;
+    }
+    .class-list__btn-slide button {
+      cursor: pointer;
+      border: 0;
+      /* padding trick */
+      height: 0;
+      overflow: hidden;
+    }
+    .is-pause {
+      background: url(../image/main_screen_2/Pause_button.svg) no-repeat 0 0 / 100%;
+      /* padding trick */
+      width: 13px;
+      padding: 20px 0 0 0;
+    }
+    .btn-slide__item {
+      background: url(../image/main_screen_2/indicator.svg) no-repeat 0 50% / 100%;
+      /* padding trick */
+      width: 13px;
+      padding: 20px 0 0 0;
+    }
+    .btn-slide__item.is-active {
+      background: url(../image/main_screen_2/indicator_\(active\).svg) no-repeat 0 50% / 100%;
+      /* padding trick */
+      width: 38px;
+      padding: 20px 0 0 0;
+    }
+
+/* 유튜브 영상 섹션 #4 */
+.wcafe-youtube {
+  position: relative;
+  height: 590px;
+  background-color: var(--grayscale-black);
+  background-image: url(../image/main_screen_4/StarSymbol.svg),
+    url(../image/main_screen_4/StarSymbol.svg);
+    background-repeat: no-repeat;
+    background-position: 7% 50%, 93% 50%;
+}
+
+.wcafe-youtube-wrapper {
+  margin: 0;
+}
+
+.wcafe-youtube-wrapper iframe {
+  width: 960px;
+  height: 540px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  border: 0;
+}
+
+/* 메뉴 종류 섹션 #5 */
+.promotion-info {
+  position: relative;
+  height: 458px;
+  background: var(--main-color-pale-brown) 
+  url(../image/image-png/background3.png) no-repeat;
+  background-size: cover;
+  background-position: 0;
+  color: var(--main-color-pale-brown);
+}
+
+.brief-wrap{
+  position: absolute;
+  left: 15%;
+  top: 15%;
+}
+.brief-wrap::before{
+  position: absolute;
+  top: 55px;
+  left: -100px;
+  content: "";
+  display: block;
+  width: 70px;
+  height: 95px;
+  background-image: url(../image/main_screen_5/StarSymbol.svg);
+  background-repeat: no-repeat;
+}
+
+.promotion-info__brief{
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.promotion-info__brief em{
+  font-style: normal;
+}
+.promotion-info__brief[lang="en"]{
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 15%;
+}
+.promotion-info__brief[lang="en"] em{
+  font-weight: 400;
+  font-size: 2.6rem;
+  letter-spacing: 5%;
+}
+.promotion-info a{
+  width: 128px;
+  height: 36px;
+  padding: 10px 25px;
+  text-align: center;
+  display: block;
+  margin-top: 30;
+  border: 2px solid var(--main-color-pale-brown);
+  border-radius: 3px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-style: normal;
+  padding: 5px 13px;
+}
+
+/* 이듬 블랜디드 러닝 소개 섹션 #8 */
+
+
+
+/* --------------------------------------------
+  * 푸터 디자인 */
+/* flex로 수직 정렬 */
+.app-footer {
+  background-color: var(--grayscale-black);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: var(--grayscale-white);
+}
+
+.app-footer__guide-list {
+  background-color: var(--grayscale-black);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 82px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 252, 249, .2);
+  border-bottom: 1px solid rgba(255, 252, 249, .2);
+}
+
+.app-footer__guide-list a {
+  margin: 0 30px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 82px;
+  /* 수직 정렬 line-height trick */
+  white-space: nowrap;
+  opacity: .6;
+}
+
+/* 푸터 메뉴 키보드 포커스 및 마우스 오버 시 text opacity 변경 */
+.app-footer__guide-list a:focus,
+.app-footer__guide-list a:hover {
+  opacity: 1;
+}
+
+.app-footer__brand {
+  width: 77px;
+  height: 90px;
+  margin: 40px 0;
+}
+
+.app-footer__address {
+  text-align: center;
+  font-style: normal;
+  opacity: .6;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+
+.copyright {
+  margin-bottom: 60px;
+  opacity: .6;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 21px;
+}
