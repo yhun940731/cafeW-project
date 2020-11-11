@@ -657,6 +657,116 @@
   border-radius: 3px;
 }
 
+/* 메뉴 종류 섹션(#6) */
+.various-menu-container {
+  background-color: lightgreen;
+  margin: 0;
+  width: 100%;
+  height: 852px;
+}
+.various-menu {
+  background: url(../image/image-png/background4.png) no-repeat 0 0 / auto 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+/* 섹션#6 text box 스타일링 */
+.various-menu em {
+  font-style: normal;
+  /* em 기본 스타일 제거 */
+}
+.various-menu__text-box {
+  white-space: pre-line;
+  /* 줄바꿈 */
+  text-align: right;
+  color: var(--grayscale-white);
+  position: relative;
+  /* 자세히 보기 버튼 배치 기준 */
+}
+/* PICK YOUR FAVORITE */
+.text-box__ir {
+  font-size: 74px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 4px;
+  margin-bottom: 44px;
+}
+.text-box__ir {
+  margin: 110px 0 44px 111px;
+}
+.text-box__ir em:nth-child(1) {
+  font-size: 155px;
+  line-height: 124px;
+  letter-spacing: 8px;
+}
+.text-box__ir em:nth-child(2) {
+  font-size: 133px;
+  line-height: 106px;
+  letter-spacing: 7px;
+}
+.text-box__brief {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.text-box__brief {
+  margin: 0;
+}
+.text-box__brief em {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+/* 자세히 보기 버튼 */
+.various-menu__btn {
+  display: inline-block;
+  width: 135px;
+  padding: 10px 25px;
+  text-align: center;
+  border: 3px solid var(--grayscale-white);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  position: absolute;
+  top: 703px;
+  left: 353px;
+}
+
+/* 섹션#6 image box 이미지 배치 및 스타일링 */
+.various-menu__image-box {
+  width: 926px;
+  height: 852px;
+  position: relative;
+}
+.image-box__image1,
+.image-box__image2,
+.image-box__image3  {
+  position: absolute;
+}
+.image-box__image1 {
+  background: url(../image/image-png/picture-frame1.png) no-repeat 0 0 / 100%;
+  top: 191px;
+  left: 81px;
+  width: 384px;
+  height: 462px;
+}
+.image-box__image2 {
+  background: url(../image/image-png/picture-frame2.png) no-repeat 0 0 / 100%;
+  top: 151px;
+  left: 300px;
+  width: 384px;
+  height: 462px;
+}
+.image-box__image3 {
+  background: url(../image/image-png/picture-frame3.png) no-repeat 0 0 / auto 100%;
+  top: 292px;
+  left: 457px;
+  width: 500px;
+  height: 482px;
+}
+
 /* 이듬 블랜디드 러닝 소개 섹션 #8 */
 /* 배경 적용 및 전체 폰트 색상 적용 */
 .curriculum-info {
