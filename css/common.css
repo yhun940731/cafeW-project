@@ -1,5 +1,5 @@
 /* 본문 내 헤더, 메인 콘텐츠, 푸터 배치를 위한 body 레이아웃 */
-
+body {}
 
 /* --------------------------------------------
   * 헤더 디자인 */
@@ -71,7 +71,11 @@
   margin: 0;
 }
 
-.menu-item {}
+.menu-item {
+  display: inline-block;
+  width: 180px;
+  margin-right: 64px;
+}
 
 .menu-button {
   display: block;
@@ -533,4 +537,179 @@
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 21px;
+}
+
+
+
+/* section 3 디자인 */
+
+.contents-container {
+  min-width:1440px;
+  height: 460px;
+  display: flex;
+  background-color: #7D6F5D;
+}
+
+.contents-review {
+  width: 743px;
+  height: 400px;
+  background: #282725;
+  margin-left: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.favorite-contents {
+  width:459px;
+  height: 220px;
+  background: #FFFCF9;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+.brochure {
+  width:459px;
+  height: 160px;
+  background: #E27762;
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-bottom: 30px;
+}
+
+.review-heading {
+  color:#FFFCF9;
+  height: 43px;
+  width: 291px;
+  margin:0;
+  padding:0;
+  border:0;
+  margin-left:91px;
+  margin-top:90px;
+}
+.review-heading::before{
+  content:"";
+  display:block;
+  width:40px;
+  height:10px;
+  border:0;
+  border-top:1px solid white;
+  position:relative;
+  top:-30px;
+
+
+}
+.review-brief {
+  color:#FFFCF9;
+  margin-left:91px;
+  margin-top:10px;
+  margin-right:167px;
+  font-weight:400;
+  font-size:13px;
+  color:#FFFCF9;
+  
+}
+
+.contents-review__change-btn {
+  background: tomato;
+}
+.review-brief footer{
+  margin-top:14px;
+}
+.rating::before{
+  content: "";
+  display:inline-block;
+  width:110px;
+  height:20px;
+  background: url(../image/main_screen_2/star_rating.svg) repeat;
+}
+
+
+/* section 7 */
+.coffee-lab-container{
+ min-width:1440px;
+ height:1192px;
+ background:#FFFCF9;
+}
+.coffee-lab{
+  position:relative;
+}
+.coffee-lab__heading{
+  width:484px;
+  height:144px;
+  margin:0 auto;
+  text-align:center;
+  line-height:144px;
+  font-weight:700;
+  font-size:46px;
+}
+.coffee-lab__brief{
+  width:449px;
+  height:25px;
+  margin:0 auto;
+  margin-top:8px;
+  text-align:center;
+  line-height:25px;
+  font-weight:700;
+  font-size:18px;
+
+}
+.coffee-lab__brief::after{
+  content:"";
+  display:block;
+  width:50px;
+  height:10px;
+  border:0;
+  border-top:1px solid black;
+  position:relative;
+  top:50px;
+  left:190px;
+}
+
+.coffee-lab__lab-menu{
+  width: 692px;
+  height: 692px;
+  background:url(../image/image-png/front-image.png) no-repeat;
+  position:absolute;
+  top:287px;
+  left:120px;
+  z-index:1;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:flex-end;
+  align-items:center;
+}
+.coffee-lab__lab-barista{
+  width:692px;
+  height:692px;
+  background:url(../image/image-png/back-image.png) no-repeat;
+  position:absolute;
+  top:420px;
+  right:120px;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.coffee-lab__lab-menu a,
+.coffee-lab__lab-barista a{
+ color:#FFFCF9;
+ margin-bottom:150px;
+ font-weight:700;
+ font-size:32px;
+ text-align: center;
+}
+.coffee-lab__lab-menu a::after{
+  content:"";
+  display:block;
+  width:180px;
+  margin-top:10px;
+  border-top:10px solid #FFFCF9;
+}
+.coffee-lab__lab-barista a::after{
+  content:"";
+  display:block;
+  width:220px;
+  margin-top:10px;
+  border-top:10px solid #FFFCF9;
 }

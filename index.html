@@ -456,10 +456,11 @@
                 <div id="reviewSlider">
                     <h3 class="review-heading">무엇이 중요한지 알게된 시간!</h3>
                     <blockquote class="review-brief">
-                        <p>제가 들었던 해외 튜토리얼에 비해 시맨틱한 마크업과 접근성 비중이 크게 다뤄져 좋았습니다.\
-                            많은 튜토리얼들이 디자인을 어떻게 구현하는지에만 초점이 맞춰져 있잖아요.
+                        <!-- 나중에 이거 왜 블럭쿼트 썼는지 -->
+                        <p>제가 들었던 해외 튜토리얼에 비해 시맨틱한 마크업과 접근성 비중이 크게 다뤄져 좋았
+                            습니다. 많은 튜토리얼들이 디자인을 어떻게 구현하는지에만 초점이 맞춰져 있잖아요.
                             무엇이 중요한지 알게되어 많은 도음이 되었습니다.</p>
-                        <span class="review-brief__rating rating"><img src="#" alt="강의평점"> 5점</span>
+                        <span class="review-brief__rating rating"> 5점</span>
                         <footer>
                             우정민
                         </footer>
@@ -468,24 +469,28 @@
                 <button type="button" class="contents-review__change-btn" aria-label="이전 강좌 보기"></button>
             </section>
 
-            <!-- 인기 강좌 섹션 -->
-            <section class="favorite contents">
-                <h2 class="favorite-heading">카페 W 인기 강좌</h2>
-                <ol class="favorite-list">
-                    <li><a href="#">UI 구조 & 디자인</a><em class="up">상승</em></li>
-                    <li><a href="#">모바일 웹 UI 제작 실습</a><em class="down">신규</em></li>
-                    <li><a href="#">UI 인터렉션 주니어</a><em class="stop">하락</em></li>
-                    <li><a href="#">React 프로그래밍</a><em class="up">멈춤</em></li>
-                </ol>
-                <a class="favorite-more" href="#" aria-label="인기 강좌 더보기"></a>
-            </section>
+            
 
-            <!-- 브로슈어 다운로드 부분 -->
-            <div class="brochure">
-                <a href="#">브로슈어 다운받기</a>
+            <div class="favorite-brouchure-container">
+                <!-- 인기 강좌 섹션 -->
+                <section class="favorite-contents">
+                    <h2 class="favorite-heading">카페 W 인기 강좌</h2>
+                    <ol class="favorite-list">
+                        <li><a href="#">UI 구조 & 디자인</a><em class="up">상승</em></li>
+                        <li><a href="#">모바일 웹 UI 제작 실습</a><em class="new">신규</em></li>
+                        <li><a href="#">UI 인터렉션 주니어</a><em class="down">하락</em></li>
+                        <li><a href="#">React 프로그래밍</a><em class="stop">멈춤</em></li>
+                    </ol>
+                    <a class="favorite-more" href="#" aria-label="인기 강좌 더보기"></a>
+                </section>
+
+                <!-- 브로슈어 다운로드 부분 -->
+                <div class="brochure">
+                    <a href="#">브로슈어 다운받기</a>
+                </div>
             </div>
         </div>
-
+        
         <!-- 유튜브 영상 섹션 -->
         <div class="video-container">
             <section class="wcafe-youtube">
