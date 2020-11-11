@@ -1,23 +1,28 @@
 /* 본문 내 헤더, 메인 콘텐츠, 푸터 배치를 위한 body 레이아웃 */
-body {}
+
 
 /* --------------------------------------------
   * 헤더 디자인 */
 .app-header {
-  position: relative;
-  background-color: var(--grayscale-black);
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
   color: var(--grayscale-white);
+  background-color: var(--grayscale-black);
+  border-bottom: 1px solid var(--grayscale-white-border);
+  padding: 15px 120px;
 }
 
 .app-header__logo {
-  text-align: center;
   margin: 0;
 }
 
 .app-header__sign {
-  position: absolute;
-  top: 0;
-  left: 109px;
+  order: -1;
 }
 
 .app-header__sign li {
@@ -26,44 +31,47 @@ body {}
   font-size: 1.6rem;
 }
 
-.app-header__search-form {}
+.app-header__search-form {
+  position: relative;
+}
 
 .search-container input {
   width: 252px;
   height: 40px;
-  position: absolute;
-  top: 0;
-  right: 120px;
-  margin: 21px 0;
   border: 0;
   background-color: transparent;
 }
 
 .search-container__btn-search {
+  background-image: url(../image/header/Search.svg);
   position: absolute;
-  top: 21px;
-  right: 120px;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
 }
 
 /* --------------------------------------------
   * 네비게이션 디자인 */
 .app-navigation {
+  padding: 85px 120px 10px 120px;
   background-color: var(--grayscale-black);
   color: var(--grayscale-white);
 }
 
 .app-navigation__menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
-  padding: 47px 120px;
 }
 
-
-.menu-item {
-  display: inline-block;
-  width: 180px;
-  margin-right: 64px;
-}
-
+.menu-item {}
 
 .menu-button {
   display: block;
@@ -77,7 +85,6 @@ body {}
   font-size: 1.5rem;
   padding-bottom: 7px;
 }
-
 
 /* --------------------------------------------
   * 메인 콘텐츠 섹션 공통 */
@@ -450,7 +457,8 @@ body {}
 .curriculum-info--back:hover {
   z-index: -1;
 }
-.curriculum-info--front:hover + .curriculum-info--back{
+
+.curriculum-info--front:hover+.curriculum-info--back {
   z-index: -1;
 }
 
