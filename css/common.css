@@ -243,6 +243,153 @@ body {}
     font-size: 16px;
     font-weight: 700;
   }
+  /* 추천 강좌 섹션 */
+  .slide-container {
+    position: relative;
+    overflow: hidden;
+  }
+  /* 각 섹션 기본 디자인 */
+  .slide-container section:nth-child(1) {
+    background-color: var(--grayscale-white);
+    padding-top: 104px;
+    /* 탭 버튼과 강의목록 사이 여백 부여 */
+  }
+  .slide-container section:nth-child(2) {
+    background-color: var(--grayscale-black);
+    padding-top: 104px;
+    /* 탭 버튼과 강의목록 사이 여백 부여 */
+  }
+  .class-list:nth-child(1) {
+    background-color: var(--grayscale-white);
+  }
+  .class-list:nth-child(2) {
+    background-color: var(--grayscale-black);
+  }
+  /* 드러내기(.is-active는 section에만 부여) */
+  .is-active .class-list,
+  .is-active .class-list__btn-class,
+  .is-active .class-list__btn-slide {
+    display: block;
+  }
+  /* 감추기 */
+  .class-list,
+  .class-list__btn-class,
+  .class-list__btn-slide {
+    display: none;
+  }
+  /* 탭 배치 */
+  .tab {
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+  .multicampus-class-heading {
+    left: 0;
+  }
+  .euid-class-heading {
+    left: 830px;
+    width: 800px;
+  }
+  /* 탭 디자인 */
+  .tab a {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 22px 0 26px;
+  }
+  .tab em {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .multicampus-class-heading a {
+    background: var(--grayscale-white) url(../image/main_screen_1/ChevronUp.svg) no-repeat 793px 47%;
+    /* 탭에 화살표 아이콘 삽입 */
+    color: var(--grayscale-black);
+    padding-left: 624px;
+    padding-right: 64px;
+  }
+  .euid-class-heading a {
+    background: var(--grayscale-black) url(../image/main_screen_1/ChevronDown.svg) no-repeat 568px 47%;
+    /* 탭에 화살표 아이콘 삽입 */
+    color: var(--grayscale-white);
+    padding-left: 353px;
+    padding-right: 163px;
+  }
+  /* 강의 목록 */
+  /* 강의 목록 배치 */
+  .is-active .class-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  /* 강의 목록 디자인 */  
+  .class-list__item {
+    color: var(--grayscale-white);
+    width: 387px;
+    height: 424px;
+    margin-right: 20px;
+    border-radius: 6px;
+    text-align: center;
+    /* 강의 목록 hover할 때 그림자 효과 자연스럽게 주기 위함 */
+    transition: box-shadow .3s;
+  }
+  .class-list__item:nth-child(1) {
+    background: var(--grayscale-black) url(../image/image-png/background1.png) no-repeat 0 0 / 100%;
+  }
+  .class-list__item:nth-child(2) {
+    background: var(--grayscale-black) url(../image/image-png/background2.png) no-repeat 0 0 / 100%;}
+  .class-list__item:nth-child(3) {
+    background: var(--grayscale-black) url(../image/image-png/background5.png) no-repeat 0 0 / 100%;}
+    /* 강의 목록 text 꾸미기 */
+    .class-item__title, 
+    .class-item__brief {
+      margin: 0;
+    }
+    .class-item__title {
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-top: 241px;
+      margin-bottom: 9px;
+    }
+    .class-item__brief {
+      font-size: 21px;
+      line-height: 21px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    /* 강의 정보 버튼 꾸미기 */
+    .class-list__item button[aria-haspopup="dialog"] {
+      cursor: pointer;
+      border: 3px solid var(--grayscale-white);
+      border-radius: 5px;
+      background-color: transparent;
+      color: var(--grayscale-white);
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 700;
+      padding: 10px 25px;
+      /* 아래 효과 자연스럽게 적용 */
+      transition: all .3s ease;
+    }
+    /* 강의 정보 버튼 꾸미기 - 마우스오버 및 키보드포커스 시 효과 */
+    .class-list__item button[aria-haspopup="dialog"]:hover, 
+    .class-list__item button[aria-haspopup="dialog"]:focus {
+      background-color: var(--grayscale-white);
+      color: var(--grayscale-black);
+    }
+    /* 강의 목록 hover할 때 그림자 효과 */
+    .class-list__item:hover {
+      box-shadow: 1px 15px 8px 0 #aaa;
+    }
+    /* 강의 정보 배치 */
+    /* 강의 정보 꾸미기 */
+  /* detail 임시 숨김 */
+  .class-item__detail {
+    display: none;
+  }
 
 /* 유튜브 영상 섹션 #4 */
 .wcafe-youtube {
