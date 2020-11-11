@@ -243,27 +243,18 @@ body {}
     font-size: 16px;
     font-weight: 700;
   }
+
+
   /* 추천 강좌 섹션 */
   .slide-container {
     position: relative;
     overflow: hidden;
   }
   /* 각 섹션 기본 디자인 */
-  .slide-container section:nth-child(1) {
-    background-color: var(--grayscale-white);
+  .slide-container section.is-active {
+    /* background-color: var(--grayscale-white); */
     padding-top: 104px;
     /* 탭 버튼과 강의목록 사이 여백 부여 */
-  }
-  .slide-container section:nth-child(2) {
-    background-color: var(--grayscale-black);
-    padding-top: 104px;
-    /* 탭 버튼과 강의목록 사이 여백 부여 */
-  }
-  .class-list:nth-child(1) {
-    background-color: var(--grayscale-white);
-  }
-  .class-list:nth-child(2) {
-    background-color: var(--grayscale-black);
   }
   /* 드러내기(.is-active는 section에만 부여) */
   .is-active .class-list,
@@ -328,8 +319,8 @@ body {}
     color: var(--grayscale-white);
     width: 387px;
     height: 424px;
-    margin-right: 20px;
     border-radius: 6px;
+    margin-right: 20px;
     text-align: center;
     /* 강의 목록 hover할 때 그림자 효과 자연스럽게 주기 위함 */
     transition: box-shadow .3s;
@@ -384,12 +375,71 @@ body {}
     .class-list__item:hover {
       box-shadow: 1px 15px 8px 0 #aaa;
     }
-    /* 강의 정보 배치 */
-    /* 강의 정보 꾸미기 */
+    /* 강의 정보(detail) 배치 */
   /* detail 임시 숨김 */
   .class-item__detail {
     display: none;
   }
+    .class-item__detail:nth-child(1) {
+      display: block;
+      background: olive;
+    }
+    /* 강의 정보(detail) 꾸미기 */
+
+    /* 강의 목록 넘기기 버튼 */
+    .btn-class__prev, 
+    .btn-class__next {
+      border: 0;
+      cursor: pointer;
+      position: absolute;
+      width: 13px;
+      height: 24px;
+    }
+    .btn-class__prev {
+      top: 304px;
+      left: 53px;
+      background: url(../image/main_screen_2/ChevronLeft.svg) no-repeat 0 0 / 100%;
+    }
+    .btn-class__next {
+      top: 304px;
+      right: 53px;
+      background: url(../image/main_screen_2/ChevronRight.svg) no-repeat 0 0 / 100%;
+    }
+    /* 페이지네이션 */
+    .is-active .class-list__btn-slide {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 38px auto;
+      width: 117px;
+      height: 20px;
+    }
+    .class-list__btn-slide button {
+      cursor: pointer;
+      border: 0;
+      /* padding trick */
+      height: 0;
+      overflow: hidden;
+    }
+    .is-pause {
+      background: url(../image/main_screen_2/Pause_button.svg) no-repeat 0 0 / 100%;
+      /* padding trick */
+      width: 13px;
+      padding: 20px 0 0 0;
+    }
+    .btn-slide__item {
+      background: url(../image/main_screen_2/indicator.svg) no-repeat 0 50% / 100%;
+      /* padding trick */
+      width: 13px;
+      padding: 20px 0 0 0;
+    }
+    .btn-slide__item.is-active {
+      background: url(../image/main_screen_2/indicator_\(active\).svg) no-repeat 0 50% / 100%;
+      /* padding trick */
+      width: 38px;
+      padding: 20px 0 0 0;
+    }
 
 /* 유튜브 영상 섹션 #4 */
 .wcafe-youtube {
