@@ -7,7 +7,7 @@
     <meta name="description" content="이디야 커피 브랜드 사이트 (학습용) 홈페이지입니다." />
     <meta name="keywords" content="이디야, 커피, 브랜드, 사이트, 학습용, 홈페이지, 이듬, 블렌디드 러닝" />
     <meta name="author" content="이듬(E.UID)" />
-    <title>cafe W</title>
+    <title>cafe W 방문을 환영합니다.</title>
 
     <link rel="preload" as="style" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" />
     <link rel="preload" as="style" href="./css/style.css" />
@@ -24,7 +24,7 @@
     <!-- 헤더 영역 -->
     <header class="app-header">
         <h1 class="app-header__logo">
-            <a href="./index.html"><img src="#" alt="cafe W"></a>
+            <a href="./index.html"><img src="./image/header/CafeW_logo.svg" alt="cafe W"></a>
         </h1>
 
         <ul class="app-header__sign reset-list">
@@ -49,7 +49,7 @@
     <!-- 네비게이션 영역 -->
     <nav class="app-navigation">
         <h2 class="a11y-hidden">메인 메뉴</h2>
-        <ul class="app-navigation__menu">
+        <ul class="app-navigation__menu reset-list">
             <li class="menu-item">
                 <a href="#" class="menu-button">Drinks</a>
                 <ul class="sub-menu sub-menu1 reset-list">
@@ -139,30 +139,35 @@
         <div class="recommend-beverage-container">
             <section class="recommend-beverage">
                 <h2 class="a11y-hidden">W 카페의 추천 메뉴</h2>
-                <p class="recommend-beverage__text" lang="en">
-                    SPRING IS A CUP of
-                    <em>CHOUX CREAM</em>
-                </p>
-                <p class="recommend-beverage__text">봄이 왔다 커피가 설렌다</p>
-
-                <ul class="recommend-beverage__list reset-list">
-                    <li class="recommend-beverage__list__item">
-                        <img src="./image/main_screen_1/drink1.svg"
-                            alt="딸기 레이어 슈 크림 프라프치노 - STRAWBERRY LAYER CHOUX CREAM FRAPPUCCINO">
-                        <p><span lang="en">STRAWBERRY LAYER CHOUX CREAM FRAPPUCCINO</span>
-                            딸기 레이어 슈 크림 프라프치노</p>
-                    </li>
-                    <li class="recommend-beverage__list__item">
-                        <img src="./image/main_screen_1/drink2.svg" alt="슈 크림 라떼 - CHOUX CREAM LATTE">
-                        <p><span lang="en">CHOUX CREAM LATTE</span>
-                            슈 크림 라떼</p>
-                    </li>
-                    <li class="recommend-beverage__list__item">
-                        <img src="./image/main_screen_1/drink3.svg" alt="스프링 피치 그린 티 - SPRING PEACH GREEN TEA">
-                        <p><span lang="en">SPRING PEACH GREEN TEA</span>
-                            스프링 피치 그린 티</p>
-                    </li>
-                </ul>
+                <!-- flex 배치를 위한 임시 마크업 -->
+                <div class="text-box">
+                    <p class="recommend-beverage__text" lang="en">
+                        SPRING IS A CUP <span class="white-space">of</span>
+                        <em>CHOUX CREAM</em>
+                    </p>
+                    <p class="recommend-beverage__text">봄이 왔다 커피가 설렌다</p>
+                </div>
+                <!-- flex 배치를 위한 임시 마크업 -->
+                <div class="image-box">
+                    <ul class="recommend-beverage__list reset-list">
+                        <li class="recommend-beverage__list__item">
+                            <img src="./image/main_screen_1/drink1.svg"
+                                alt="딸기 레이어 슈 크림 프라프치노 - STRAWBERRY LAYER CHOUX CREAM FRAPPUCCINO">
+                            <p><span lang="en">STRAWBERRY LAYER<em class="white-space">CHOUX CREAM FRAPPUCCINO</em></span>
+                                딸기 레이어 슈 크림 프라프치노</p>
+                        </li>
+                        <li class="recommend-beverage__list__item">
+                            <img src="./image/main_screen_1/drink2.svg" alt="슈 크림 라떼 - CHOUX CREAM LATTE">
+                            <p><span lang="en"><em class="white-space">CHOUX CREAM LATTE</em></span>
+                                슈 크림 라떼</p>
+                        </li>
+                        <li class="recommend-beverage__list__item">
+                            <img src="./image/main_screen_1/drink3.svg" alt="스프링 피치 그린 티 - SPRING PEACH GREEN TEA">
+                            <p><span lang="en">SPRING<em class="white-space">PEACH GREEN TEA</em></span>
+                                스프링 피치 그린 티</p>
+                        </li>
+                    </ul>
+                </div>
 
                 <a href="#" class="recommend-beverage__more-info">자세히 보기</a>
             </section>
@@ -498,17 +503,21 @@
                 </figure>
             </section>
         </div>
+
+        <!-- 프로모션 정보 섹션 -->
         <div class="promotion-info-container">
             <section class="promotion-info">
                 <h2 class="a11y-hidden">프로모션 홍보</h2>
-                <p class="promotion-info__brief" lang="en">CAFE W . RESERVE <em class="white-space">A DELICATE
-                        FRAGRANCE</em></p>
-                <p class="promotion-info__brief">입 안 가득 퍼지는 산뜻하고 <em class="white-space">따뜻한 봄의 향기</em></p>
-                <a href="#" class="promotion-info__btn">자세히 보기</a>
+                <div class="brief-wrap">
+                    <p class="promotion-info__brief" lang="en">CAFE W . RESERVE <em class="white-space">A DELICATE
+                            FRAGRANCE</em></p>
+                    <p class="promotion-info__brief">입 안 가득 퍼지는 산뜻하고 <em class="white-space">따뜻한 봄의 향기</em></p>
+                    <a href="#" class="promotion-info__btn">자세히 보기</a>
+                </div>
             </section>
         </div>
 
-         <!-- 메뉴 종류 섹션 -->
+        <!-- 메뉴 종류 섹션 -->
         <div class="various-menu-container">
             <section class="various-menu">
                 <h2 class="a11y-hidden">메뉴 종류</h2>
@@ -529,7 +538,7 @@
             </section>
         </div>
 
-         <!-- 커피 랩 섹션 -->
+        <!-- 커피 랩 섹션 -->
         <div class="coffee-lab-container">
             <section class="coffee-lab">
                 <h2 class="coffee-lab__heading">CAFE W <em>COFFEE LAB</em></h2>
@@ -539,22 +548,22 @@
             </section>
         </div>
 
-         <!-- 이듬 블랜디드 러닝 소개 섹션 -->
+        <!-- 이듬 블랜디드 러닝 소개 섹션 -->
         <div class="curriculum-info__container">
             <section class="curriculum-info">
-                <div class="curriculum-info--front">
+                <div class="curriculum-info--back coin">
                     <h2 class="curriculum-info__heading">이듬 블랜디드 러닝</h2>
                     <p class="curriculum-info__brief">이듬 블렌디드 러닝 과정에서 운영하는 각 과정의 자세한 커리큘럼을 확인하려면
                         <em>과정보기</em>를 눌러주세요.</p>
                     <a href="#" class="">과정 보기</a>
                 </div>
-                <div class="curriculum-info--back">
-                    <img src="#" alt="마우스를 올려주세요">
+                <div class="curriculum-info--front coin">
+                    <img src="./image/main_screen_9/StarSymbol.svg" alt="마우스를 올려주세요" title="마우스를 올려주세요">
                 </div>
             </section>
         </div>
 
-         <!-- 매장 찾기 섹션 -->
+        <!-- 매장 찾기 섹션 -->
         <div class="find-store__container">
             <section class="find-store">
                 <h2 class="a11y-hidden">매장찾기</h2>
@@ -585,7 +594,7 @@
             <li><a href="#">사이트맵</a></li>
         </ul>
         <div class="app-footer__brand">
-            <img src="./image/footer/CafeW(Vertical).svg" alt="Cafe W logo">
+            <img src="./image/footer/CafeW_Vertical.svg" alt="Cafe W logo">
         </div>
         <address class="app-footer__address">
             <span>
@@ -608,11 +617,13 @@
         </small>
         <button type="button" class="button-goToTop">
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-              <title>페이지 상단 이동</title>
-              <circle cx="25" cy="25" r="25" fill="#C8CDE2" />
-              <path d="M25 38C25.6072 38 26.1 37.5147 26.1 36.9167V15.3047L34.1037 23.5803C34.3198 23.804 34.6097 23.9167 34.9001 23.9167C35.1723 23.9167 35.4457 23.8175 35.6585 23.6177C36.0985 23.2049 36.1156 22.5192 35.6965 22.0858L26.556 12.6348C26.1402 12.2259 25.588 12 25 12C24.412 12 23.8598 12.2259 23.4259 12.6538L14.3035 22.0864C13.8844 22.5197 13.9015 23.2055 14.3415 23.6182C14.7815 24.031 15.4783 24.0142 15.8969 23.5808L23.9 15.2706V36.9167C23.9 37.5147 24.3928 38 25 38Z" fill="#0F0F0F" />
+                <title>페이지 상단 이동</title>
+                <circle cx="25" cy="25" r="25" fill="#C8CDE2" />
+                <path
+                    d="M25 38C25.6072 38 26.1 37.5147 26.1 36.9167V15.3047L34.1037 23.5803C34.3198 23.804 34.6097 23.9167 34.9001 23.9167C35.1723 23.9167 35.4457 23.8175 35.6585 23.6177C36.0985 23.2049 36.1156 22.5192 35.6965 22.0858L26.556 12.6348C26.1402 12.2259 25.588 12 25 12C24.412 12 23.8598 12.2259 23.4259 12.6538L14.3035 22.0864C13.8844 22.5197 13.9015 23.2055 14.3415 23.6182C14.7815 24.031 15.4783 24.0142 15.8969 23.5808L23.9 15.2706V36.9167C23.9 37.5147 24.3928 38 25 38Z"
+                    fill="#0F0F0F" />
             </svg>
-          </button>
+        </button>
     </footer>
 
 </body>
