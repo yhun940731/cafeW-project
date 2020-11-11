@@ -10,7 +10,7 @@ body {}
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   color: var(--grayscale-white);
   background-color: var(--grayscale-black);
   border-bottom: 1px solid var(--grayscale-white-border);
@@ -92,6 +92,42 @@ body {}
 
 /* --------------------------------------------
   * 메인 콘텐츠 섹션 공통 */
+.app-main {
+  position: relative;
+}
+/* 공지사항 */
+.notice-info {
+  background-color: rgba(226,119,98,.8);
+  backdrop-filter: blur(2px);
+  width: 601px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid var(--grayscale-white);
+  font-size: 16px;
+  /* 배치 */
+  position: absolute;
+  top: 506px;
+  left: 420px;
+  z-index: 3;
+  /* .app-header의 z-index는 5 */
+  /* flex container */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice-info__brief {
+  background-color: forestgreen;
+  margin: 0 0 0 75px;
+  width: 330px;
+}
+.notice-info time {
+  background-color: greenyellow;
+}
+.button-close {
+  margin-right: 20px;
+}
+
 /* 추천 메뉴 섹션 */
 /* text-box와 image-box를 flex로 가로 배치함 */
 .recommend-beverage {
