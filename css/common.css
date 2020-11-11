@@ -279,6 +279,291 @@ body {}
   font-weight: 700;
 }
 
+
+  /* 추천 강좌 섹션 */
+  .slide-container {
+    position: relative;
+    overflow: hidden;
+  }
+  /* 각 섹션 기본 디자인 */
+  .slide-container section.is-active {
+    padding-top: 104px;
+    /* 탭 버튼과 강의목록 사이 여백 부여 */
+  }
+  .recommend-class-multicampus {
+    background-color: var(--grayscale-white);
+  }
+  .recommend-class-euid {
+    background-color: var(--grayscale-black);
+  }
+  /* 드러내기(.is-active는 section에만 부여) */
+  .is-active .class-list,
+  .is-active .class-list__btn-class,
+  .is-active .class-list__btn-slide {
+    display: block;
+  }
+  /* 감추기 */
+  .class-list,
+  .class-list__btn-class,
+  .class-list__btn-slide {
+    display: none;
+  }
+  /* 탭 배치 */
+  .tab {
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+  .multicampus-class-heading {
+    left: 0;
+  }
+  .euid-class-heading {
+    left: 830px;
+    width: 800px;
+  }
+  /* 탭 디자인 */
+  .tab a {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 22px 0 26px;
+  }
+  .tab em {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .multicampus-class-heading a {
+    background: var(--grayscale-white) url(../image/main_screen_1/ChevronUp.svg) no-repeat 793px 47%;
+    /* 탭에 화살표 아이콘 삽입 */
+    color: var(--grayscale-black);
+    padding-left: 624px;
+    padding-right: 64px;
+  }
+  .euid-class-heading a {
+    background: var(--grayscale-black) url(../image/main_screen_1/ChevronDown.svg) no-repeat 568px 47%;
+    /* 탭에 화살표 아이콘 삽입 */
+    color: var(--grayscale-white);
+    padding-left: 353px;
+    padding-right: 163px;
+  }
+  /* 강의 목록 */
+  /* 강의 목록 배치 */
+  .is-active .class-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  /* 강의 목록 디자인 */  
+  .class-list__item {
+    color: var(--grayscale-white);
+    width: 387px;
+    height: 424px;
+    border-radius: 6px;
+    margin-right: 20px;
+    text-align: center;
+    /* 강의 목록 hover할 때 그림자 효과 자연스럽게 주기 위함 */
+    transition: box-shadow .3s;
+    position: relative;
+    /* 강의 정보(detail) 모달창 배치 기준 */
+  }
+  .class-list__item:nth-child(1) {
+    background: var(--grayscale-black) url(../image/image-png/background1.png) no-repeat 0 0 / 100%;
+  }
+  .class-list__item:nth-child(2) {
+    background: var(--grayscale-black) url(../image/image-png/background2.png) no-repeat 0 0 / 100%;}
+  .class-list__item:nth-child(3) {
+    background: var(--grayscale-black) url(../image/image-png/background5.png) no-repeat 0 0 / 100%;}
+    /* 강의 목록 text 꾸미기 */
+    .class-item__title, 
+    .class-item__brief {
+      margin: 0;
+    }
+    .class-item__title {
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-top: 241px;
+      margin-bottom: 9px;
+    }
+    .class-item__brief {
+      font-size: 21px;
+      line-height: 21px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    /* 강의 정보 버튼 꾸미기 */
+    .class-list__item button[aria-haspopup="dialog"] {
+      cursor: pointer;
+      border: 3px solid var(--grayscale-white);
+      border-radius: 5px;
+      background-color: transparent;
+      color: var(--grayscale-white);
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 700;
+      padding: 10px 25px;
+      /* 아래 효과 자연스럽게 적용 */
+      transition: all .3s ease;
+    }
+    /* 강의 정보 버튼 꾸미기 - 마우스오버 및 키보드포커스 시 효과 */
+    .class-list__item button[aria-haspopup="dialog"]:hover, 
+    .class-list__item button[aria-haspopup="dialog"]:focus {
+      background-color: var(--grayscale-white);
+      color: var(--grayscale-black);
+    }
+    /* 강의 목록 hover할 때 그림자 효과 */
+    .class-list__item:hover {
+      box-shadow: 1px 15px 8px 0 #aaa;
+    }
+    /* 강의 정보(detail) 배치 */
+  .is-active .class-list__item:nth-child(1) div {
+    background: rgba(40,39,37,.95);
+    display: block;
+    width: 387px;
+    height: 424px;
+    border-radius: 6px;
+    position: absolute;
+    /* 배치 기준 : .class-list__item */
+    top: 0;
+    left: 0;
+  }
+    .is-active .class-list__item:nth-child(2) div, 
+    .is-active .class-list__item:nth-child(3) div {
+      display: none;
+    }
+    /* 강의 정보(detail) 꾸미기 */
+    .class-list__item caption {
+      text-align: left;
+      font-size: 25px;
+      line-height: 22px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-top: 35px;
+    }
+    .class-list__item caption span {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 400;
+      letter-spacing: normal;
+      margin-top: 10px;
+      margin-bottom: 74px;
+    }
+    /* 별점 배치 */
+    .class-item__rating {
+      position: absolute;
+      top: 105px;
+      left: 35px;
+    }
+    .class-item__rating img {
+      vertical-align: bottom;
+    }
+    .class-item__rating em {
+      font-style: normal;
+      display: inline-block;
+      margin-left: 11px;
+      line-height: 24px;
+      /* 별과 수직 정렬 맞추기 위해 line-height trick */
+      font-size: 20px;
+      font-weight: 700;
+    }
+    /* 강의 정보(detail) 표 꾸미기 */
+    .class-detail__table {
+      width: 315px;
+      margin: 0 36px;
+      border-top: 1px solid var(--grayscale-white);
+      border-bottom: 1px solid var(--grayscale-white);
+      text-align: left;
+      /* border-collapse: collapse; */
+      border-spacing: 0;
+    }
+    .class-detail__table th, 
+    .class-detail__table td {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      padding: 10px;
+      border-bottom: 1px solid rgba(255,252,249,.3);
+      white-space: pre-line;
+      /* 연속 공백 하나로 합치고, 개행 문자는 줄바꿈 */
+    }
+    .class-detail__table tr {
+      padding: 0;
+    }
+    .class-detail__table th {
+      width: 46px;
+      padding: 6px;
+    }
+    .class-detail__table tr td:nth-child(4) {
+      padding-left: 35px;
+    }
+    /* 강의 정보 패널 닫기 버튼 */
+    .is-close-panel {
+      width: 21px;
+      height: 21px;
+      background: url(../image/main_screen_2/Closebutton.svg) no-repeat 0 0 / 100%;
+      position: absolute;
+      /* 배치 기준 : 모달창 */
+      top: 37px;
+      left: 330px;
+    }
+
+    /* 강의 목록 넘기기 버튼 */
+    .btn-class__prev, 
+    .btn-class__next {
+      border: 0;
+      cursor: pointer;
+      position: absolute;
+      width: 13px;
+      height: 24px;
+    }
+    .btn-class__prev {
+      top: 304px;
+      left: 53px;
+      background: url(../image/main_screen_2/ChevronLeft.svg) no-repeat 0 0 / 100%;
+    }
+    .btn-class__next {
+      top: 304px;
+      right: 53px;
+      background: url(../image/main_screen_2/ChevronRight.svg) no-repeat 0 0 / 100%;
+    }
+    /* 페이지네이션 */
+    .is-active .class-list__btn-slide {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 38px auto;
+      width: 117px;
+      height: 20px;
+    }
+    .class-list__btn-slide button {
+      cursor: pointer;
+      border: 0;
+      /* padding trick */
+      height: 0;
+      overflow: hidden;
+    }
+    .is-pause {
+      background: url(../image/main_screen_2/Pause_button.svg) no-repeat 0 0 / 100%;
+      /* padding trick */
+      width: 13px;
+      padding: 20px 0 0 0;
+    }
+    .btn-slide__item {
+      background: url(../image/main_screen_2/indicator.svg) no-repeat 0 50% / 100%;
+      /* padding trick */
+      width: 13px;
+      padding: 20px 0 0 0;
+    }
+    .btn-slide__item.is-active {
+      background: url(../image/main_screen_2/indicator_\(active\).svg) no-repeat 0 50% / 100%;
+      /* padding trick */
+      width: 38px;
+      padding: 20px 0 0 0;
+    }
+
 /* 유튜브 영상 섹션 #4 */
 /* 섹션 배경 이미지 추가 */
 .wcafe-youtube {
@@ -374,6 +659,116 @@ body {}
   margin-top: 20px;
   border: 2px solid var(--main-color-pale-brown);
   border-radius: 3px;
+}
+
+/* 메뉴 종류 섹션(#6) */
+.various-menu-container {
+  background-color: lightgreen;
+  margin: 0;
+  width: 100%;
+  height: 852px;
+}
+.various-menu {
+  background: url(../image/image-png/background4.png) no-repeat 0 0 / auto 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+/* 섹션#6 text box 스타일링 */
+.various-menu em {
+  font-style: normal;
+  /* em 기본 스타일 제거 */
+}
+.various-menu__text-box {
+  white-space: pre-line;
+  /* 줄바꿈 */
+  text-align: right;
+  color: var(--grayscale-white);
+  position: relative;
+  /* 자세히 보기 버튼 배치 기준 */
+}
+/* PICK YOUR FAVORITE */
+.text-box__ir {
+  font-size: 74px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 4px;
+  margin-bottom: 44px;
+}
+.text-box__ir {
+  margin: 110px 0 44px 111px;
+}
+.text-box__ir em:nth-child(1) {
+  font-size: 155px;
+  line-height: 124px;
+  letter-spacing: 8px;
+}
+.text-box__ir em:nth-child(2) {
+  font-size: 133px;
+  line-height: 106px;
+  letter-spacing: 7px;
+}
+.text-box__brief {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.text-box__brief {
+  margin: 0;
+}
+.text-box__brief em {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+/* 자세히 보기 버튼 */
+.various-menu__btn {
+  display: inline-block;
+  width: 135px;
+  padding: 10px 25px;
+  text-align: center;
+  border: 3px solid var(--grayscale-white);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  position: absolute;
+  top: 703px;
+  left: 353px;
+}
+
+/* 섹션#6 image box 이미지 배치 및 스타일링 */
+.various-menu__image-box {
+  width: 926px;
+  height: 852px;
+  position: relative;
+}
+.image-box__image1,
+.image-box__image2,
+.image-box__image3  {
+  position: absolute;
+}
+.image-box__image1 {
+  background: url(../image/image-png/picture-frame1.png) no-repeat 0 0 / 100%;
+  top: 191px;
+  left: 81px;
+  width: 384px;
+  height: 462px;
+}
+.image-box__image2 {
+  background: url(../image/image-png/picture-frame2.png) no-repeat 0 0 / 100%;
+  top: 151px;
+  left: 300px;
+  width: 384px;
+  height: 462px;
+}
+.image-box__image3 {
+  background: url(../image/image-png/picture-frame3.png) no-repeat 0 0 / auto 100%;
+  top: 292px;
+  left: 457px;
+  width: 500px;
+  height: 482px;
 }
 
 /* 이듬 블랜디드 러닝 소개 섹션 #8 */
