@@ -399,6 +399,70 @@ body {}
       display: none;
     }
     /* 강의 정보(detail) 꾸미기 */
+    .class-list__item caption {
+      text-align: left;
+      font-size: 25px;
+      line-height: 22px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-top: 35px;
+    }
+    .class-list__item caption span {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 400;
+      letter-spacing: normal;
+      margin-top: 10px;
+      margin-bottom: 74px;
+    }
+    /* 별점 배치 */
+    .class-item__rating {
+      position: absolute;
+      top: 105px;
+      left: 35px;
+    }
+    .class-item__rating img {
+      vertical-align: bottom;
+    }
+    .class-item__rating em {
+      font-style: normal;
+      display: inline-block;
+      margin-left: 11px;
+      line-height: 24px;
+      /* 별과 수직 정렬 맞추기 위해 line-height trick */
+      font-size: 20px;
+      font-weight: 700;
+    }
+    /* 강의 정보(detail) 표 꾸미기 */
+    .class-detail__table {
+      width: 315px;
+      margin: 0 36px;
+      border-top: 1px solid var(--grayscale-white);
+      border-bottom: 1px solid var(--grayscale-white);
+      text-align: left;
+      /* border-collapse: collapse; */
+      border-spacing: 0;
+    }
+    .class-detail__table th, 
+    .class-detail__table td {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      padding: 10px;
+      border-bottom: 1px solid rgba(255,252,249,.3);
+      white-space: pre-line;
+      /* 연속 공백 하나로 합치고, 개행 문자는 줄바꿈 */
+    }
+    .class-detail__table tr {
+      padding: 0;
+    }
+    .class-detail__table th {
+      width: 46px;
+      padding: 6px;
+    }
+    .class-detail__table tr td:nth-child(4) {
+      padding-left: 35px;
+    }
     /* 강의 정보 패널 닫기 버튼 */
     .is-close-panel {
       width: 21px;
