@@ -176,11 +176,11 @@
                             </div>
 
                             <!-- 생년월일 -->
-                            <div class="sign-up-form__birth fill-required">
-                                <span class="label-style fill-required">생년월일</span>
+                            <div class="sign-up-form__birth">
+                                <label for="birthInfo" class="fill-required">생년월일</label>
                                 <!-- option[value=$@1920]{$@1920}*$ -->
                                 <div class="birth-container">
-                                    <select name="year" id="year" required>
+                                    <select name="year" id="birthInfo" required>
                                         <option value="" disabled selected hidden>년도</option>
                                         <option value="1920">1920</option>
                                         <option value="1921">1921</option>
@@ -284,7 +284,7 @@
                                         <option value="2019">2019</option>
                                         <option value="2020">2020</option>
                                     </select>
-                                    <select name="month" id="month" required>
+                                    <select name="month" id="birthInfo" required>
                                         <option value="" disabled selected hidden>월</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -299,7 +299,7 @@
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-                                    <select name="day" id="day" required>
+                                    <select name="day" id="birthInfo" required>
                                         <option value="" disabled selected hidden>일</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -333,7 +333,7 @@
                                         <option value="30">30</option>
                                         <option value="31">31</option>
                                     </select>
-                                    <select name="calendar" id="calendar">
+                                    <select name="calendar" id="birthInfo">
                                         <option value="Solar">양력</option>
                                         <option value="Lunar">음력</option>
                                     </select>
