@@ -87,7 +87,7 @@ body {}
 
 .sub-menu li {
   font-size: 1.5rem;
-  padding-bottom: 7px;
+  padding-bottom: 15px;
 }
 
 /* --------------------------------------------
@@ -103,7 +103,7 @@ body {}
     border: none;
     /* 배치 */
     position: fixed;
-    bottom: 34px;
+    bottom: 0;
     right: 30px;
     z-index: 4;
   }
