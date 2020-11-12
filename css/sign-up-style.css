@@ -1,0 +1,104 @@
+.sign-up-container{
+    margin: 0 auto;
+}
+
+.sign-up{
+    width: 742px;
+    height: 1534px;
+    margin: 100px auto;
+    color: var(--main-color-gold);
+    border: 1px solid #CBC5BE;
+}
+
+/* 폼 헤더 */
+.sign-up__header{
+    text-align: center;
+    border-bottom: 1px solid var(--main-color-gold);
+    
+}
+.sign-up__header h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 25px;
+}
+.sign-up__header p {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+/* 폼 메인 */
+.sign-up__main{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 165px 100px 50px 100px;
+    background: url(../image/signup/BaristaGirl.svg) no-repeat 50% 3%;
+}
+
+.sign-up__main label,
+.label-style{
+    font-weight: 700;
+}
+.sign-up__main input{
+    display: block;
+    width: 100%;
+    height: 34px;
+    margin: 10px 0;
+    border: 1px solid var(--main-color-gold);
+    border-radius: 3px;
+}
+
+/* 필수목록 별표 표시 */
+.fill-required{
+    position: relative;
+}
+.fill-required::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: -10px;
+    width: 6px;
+    height: 6px;
+    background: url(../image/signup/requiredStar.svg) no-repeat;
+}
+
+/* 이름, 성별란 스타일 */
+.sign-up-form__name{
+    display: inline-block;
+    width:40%;
+    margin-right: 10px;
+}
+.sign-up-form__sex{
+    display: inline-block;
+    width: 30%;
+    vertical-align: bottom;
+}
+.radio-sex{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+}
+.radio-sex input{
+    width: 20px;
+}
+
+/* 생년월일 */
+.birth-container{
+    margin-top: 10px;
+}
+
+.birth-container select{
+    border: 1px solid var(--main-color-gold);
+    border-radius: 3px;
+    color: var(--main-color-gold);
+    margin-right: 10px;
+}
+#year{
+    width: 133px;
+}
+#month,#day,#calender{
+    width: 66px;
+}
+
