@@ -341,7 +341,7 @@
                                         <option value="Lunar">음력</option>
                                     </select>
                                 </div>
-                                <small>회원 가입 완료 후, Cafe W 카드를 등록하시면 무료음료 쿠폰이 발행됩니다.</small>
+                                <small class="small-star">회원 가입 완료 후, Cafe W 카드를 등록하시면 무료음료 쿠폰이 발행됩니다.</small>
                             </div>
 
                             <!-- 전화번호 -->
@@ -381,7 +381,12 @@
 
                             <!-- 동의 토글 제작 예정 -->
                             <div class="sign-up-form__consent">
-                                
+
+                                 <div class="info-save">
+                                        <input type="checkbox" id="userIDSave" class="info-input">
+                                        <label for="userIDSave">선택적 개인정보 수집동의 및 이용약관</label>
+                                    </div>
+
                                 <p><small>
                                     본인은 Cafe W(이하 “회사”라 합니다)가 제공하는 콜 마이 네임 서비스 (이하 “서비스”라 합니다)를 이용하기 위해, 다음과 같이 “회사”가
                                     본인의
@@ -401,9 +406,12 @@
                                     확인하실 수 있습니다.</small>
                                 </p>
                                 
-                                <small>회원 가입 완료 후, Cafe W 카드를 등록하시면 무료음료 쿠폰이 발행됩니다.</small>
+
+                                <small class="small-star">선택항목은 입력하지 않거나 동의하지 않아도 회원 가입이 가능합니다.</small>
                             </div>
-                                <button type="submit" class="sign-up-button">회원가입</button>
+
+                            <button type="submit" class="sign-up-button">회원가입</button>
+
 
                         </fieldset>
                     </form>
