@@ -1031,14 +1031,29 @@ body {}
   background-color:var(--grayscale-gold);
   justify-content: center;
   align-items: center;
-  position:relative;
+ 
 }
-
 .contents-review {
   width: 743px;
   height: 400px;
   background:var(--grayscale-black);
+  position: relative;
+  overflow:hidden;
 }
+
+.contents-review::after{
+  content:"5";
+  width:200px;
+  height:200px;
+  font-weight:100;
+  opacity:5%;
+  font-size:600px;
+  color:#B68C70;
+  position:absolute;
+  left:400px;
+  top:-220px;
+
+
 .review-heading {
   color:var(--grayscale-white);
   height: 43px;
@@ -1101,7 +1116,7 @@ body {}
   background:var(--grayscale-white);
   margin-left:20px;
   margin-top:-17px;
-  
+  position:relative;
 }
 .favorite-heading{
   padding-top:30px;
@@ -1114,7 +1129,7 @@ body {}
   justify-content:center;
   align-items:flex-start;
   flex-flow:column nowrap;
-  position:relative;
+ 
 }
 .favorite-list li{
   width:450px;
@@ -1140,32 +1155,32 @@ overflow:hidden;
 padding-top: 20px;
 }
 .up {
-  top:10px;
+  top:98px;
   right:20px;
   background:url(../image/main_screen_3/Increase.svg) no-repeat 0,0;
 }
 .new {
-  top:32px;
+  top:120px;
   right:15px;
   background:url(../image/main_screen_3/New.svg) no-repeat 0,0;
 }
 .down {
- top:54px;
+ top:142px;
  right:15px;
  background:url(../image/main_screen_3/decrease.svg) no-repeat 0,0;
 }
 .stop{
- top:76px;
+ top:164px;
  right:20px;
  background:url(../image/main_screen_3/minus.svg) no-repeat 0,0;
 }
 .favorite-more {
   background:url(../image/main_screen_3/Plus_button.svg) no-repeat 0,0;
-  width:100px;
-  height:100px;
+  width:20px;
+  height:20px;
   position: absolute;
-  top: 25px;
-  right: 95px;
+  top:36px;
+  right:30px;
 }
 
 /* 브로슈어 파트 */
@@ -1337,15 +1352,15 @@ padding-top: 20px;
 }
 .store-brief__title{
   color:var(--grayscale-white);
-  font-weight: 400;
-  font-size:18px;
+  font-weight: 300;
+  font-size:46px;
   display:inline-block;
   padding-bottom:10px;
 }
 .store-brief__title strong{
   display:block;
   font-weight: 700;
-  font-size:25px;
+  font-size:46px;
   padding-bottom:4px;
   width:430px;
 }
