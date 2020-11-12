@@ -105,6 +105,32 @@
     width: 66px;
 }
 
+
+/* 인증방식 */
+
+.sign-up-form__confirm{
+    border:1px solid var(--main-color-gold);
+    border-radius:3px;
+
+}
+.fill-required{
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 17px;
+text-align: left;
+
+}
+
+
+
+
+
+
+
+
+
+=======
 .small-star::before{
     content: "";
     display: inline-block;
