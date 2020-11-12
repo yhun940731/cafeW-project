@@ -1,196 +1,44 @@
-/* 본문 내 헤더, 메인 콘텐츠, 푸터 배치를 위한 body 레이아웃 */
-body {}
+/* section 3 인기강좌 섹션 */
 
-/* --------------------------------------------
-  * 헤더 디자인 */
-.app-header {
-  position: relative;
-  background-color: var(--grayscale-black);
-  color: var(--grayscale-white);
-}
-
-.app-header__logo {
-  text-align: center;
-  margin: 0;
-}
-
-.app-header__sign {
-  position: absolute;
-  top: 0;
-  left: 109px;
-}
-
-.app-header__sign li {
-  padding: 10px;
-  display: inline-block;
-  font-size: 1.6rem;
-}
-
-.app-header__search-form {}
-
-.search-container input {
-  width: 252px;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: 120px;
-  margin: 21px 0;
-  border: 0;
-  background-color: transparent;
-}
-
-.search-container__btn-search {
-  position: absolute;
-  top: 21px;
-  right: 120px;
-}
-
-/* --------------------------------------------
-  * 네비게이션 디자인 */
-.app-navigation {
-  background-color: var(--grayscale-black);
-  color: var(--grayscale-white);
-}
-
-.app-navigation__menu {
-  margin: 0;
-  padding: 47px 120px;
-}
-
-
-.menu-item {
-  display: inline-block;
-  width: 180px;
-  margin-right: 64px;
-}
-
-
-.menu-button {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: 17px;
-}
-
-.sub-menu {}
-
-.sub-menu li {
-  font-size: 1.5rem;
-  padding-bottom: 7px;
-}
-
-
-/* --------------------------------------------
-  * 메인 콘텐츠 섹션 공통 */
-
-
-/* --------------------------------------------
-  * 푸터 디자인 */
-/* flex로 수직 정렬 */
-.app-footer {
-  background-color: var(--grayscale-black);
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  color: var(--grayscale-white);
-}
-
-.app-footer__guide-list {
-  background-color: var(--grayscale-black);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  height: 82px;
-  width: 100%;
-  border-top: 1px solid rgba(255, 252, 249, .2);
-  border-bottom: 1px solid rgba(255, 252, 249, .2);
-}
-
-.app-footer__guide-list a {
-  margin: 0 30px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 82px;
-  /* 수직 정렬 line-height trick */
-  white-space: nowrap;
-  opacity: .6;
-}
-
-/* 푸터 메뉴 키보드 포커스 및 마우스 오버 시 text opacity 변경 */
-.app-footer__guide-list a:focus,
-.app-footer__guide-list a:hover {
-  opacity: 1;
-}
-
-.app-footer__brand {
-  width: 77px;
-  height: 90px;
-  margin: 40px 0;
-}
-
-.app-footer__address {
-  text-align: center;
-  font-style: normal;
-  opacity: .6;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 21px;
-  margin-bottom: 30px;
-}
-
-.copyright {
-  margin-bottom: 60px;
-  opacity: .6;
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 21px;
-}
-
-
-
-/* section 3 디자인 */
-
+/* 강의리뷰 파트 */
 .contents-container {
   min-width:1440px;
   height: 460px;
   display: flex;
-  background-color: #7D6F5D;
+  background-color:var(--grayscale-gold);
+  justify-content: center;
+  align-items: center;
+  position:relative;
 }
-
+.contents-container::after{
+  content:"5";
+  display:block;
+  width:200px;
+  height:200px;
+  font-weight:200;
+  opacity:15%;
+  font-size:600px;
+  color:var(--grayscale-gold);
+  position:absolute;
+  left:540px;
+  top:-130px;
+}
 .contents-review {
   width: 743px;
   height: 400px;
-  background: #282725;
-  margin-left: 120px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  background:var(--grayscale-black);
 }
-
-.favorite-contents {
-  width:459px;
-  height: 220px;
-  background: #FFFCF9;
-  margin-top: 30px;
-  margin-left: 25px;
-}
-
-.brochure {
-  width:459px;
-  height: 160px;
-  background: #E27762;
-  margin-top: 20px;
-  margin-left: 25px;
-  margin-bottom: 30px;
-}
-
 .review-heading {
-  color:#FFFCF9;
+  color:var(--grayscale-white);
   height: 43px;
-  width: 291px;
+  width: 350px;
   margin:0;
   padding:0;
   border:0;
   margin-left:91px;
   margin-top:90px;
+  font-size:24px;
+  font-weight:700;
 }
 .review-heading::before{
   content:"";
@@ -198,43 +46,159 @@ body {}
   width:40px;
   height:10px;
   border:0;
-  border-top:1px solid white;
+  border-top:1px solid var(--grayscale-white);
   position:relative;
   top:-30px;
-
-
 }
 .review-brief {
-  color:#FFFCF9;
+  color:var(--grayscale-white);
   margin-left:91px;
   margin-top:10px;
   margin-right:167px;
   font-weight:400;
-  font-size:13px;
-  color:#FFFCF9;
-  
+  color:var(--grayscale-white);
 }
-
-.contents-review__change-btn {
-  background: tomato;
+.review-brief p{
+  font-size :14px;
+  font-weight:300;
 }
 .review-brief footer{
   margin-top:14px;
 }
-.rating::before{
+.review-brief__rating::before{
   content: "";
   display:inline-block;
   width:110px;
   height:20px;
   background: url(../image/main_screen_2/star_rating.svg) repeat;
 }
+.contents-review__change-btn {
+  background:url(../image/main_screen_3/play_button.svg) no-repeat 0,0;
+  display:block;
+  width:100px;
+  height:100px;
+  border:0;
+  margin-left:30px;
+}
 
+/* 인기순위 파트 */
+.favorite-contents {
+  width:459px;
+  height: 220px;
+  background:var(--grayscale-white);
+  margin-left:20px;
+  margin-top:-17px;
+  
+}
+.favorite-heading{
+  padding-top:30px;
+  margin-left:24px;
+  color:var(--main-color-gold);
+}
+.favorite-list{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-flow:column nowrap;
+  position:relative;
+}
+.favorite-list li{
+  width:450px;
+  height:22px;
+  color:var(--main-color-gold);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+} 
+.favorite-list a {
+  display: block;
+  margin:10px 0;
+}
+.up,
+.stop,
+.down,
+.new {
+position:absolute;
+right: 0;
+width: 28px; 
+height: 20px;
+overflow:hidden;
+padding-top: 20px;
+}
+.up {
+  top:10px;
+  right:20px;
+  background:url(../image/main_screen_3/Increase.svg) no-repeat 0,0;
+}
+.new {
+  top:32px;
+  right:15px;
+  background:url(../image/main_screen_3/New.svg) no-repeat 0,0;
+}
+.down {
+ top:54px;
+ right:15px;
+ background:url(../image/main_screen_3/decrease.svg) no-repeat 0,0;
+}
+.stop{
+ top:76px;
+ right:20px;
+ background:url(../image/main_screen_3/minus.svg) no-repeat 0,0;
+}
+.favorite-more {
+  background:url(../image/main_screen_3/Plus_button.svg) no-repeat 0,0;
+  width:100px;
+  height:100px;
+  position: absolute;
+  top: 25px;
+  right: 95px;
+}
 
-/* section 7 */
+/* 브로슈어 파트 */
+.brochure{
+  width:459px;
+  height: 160px;
+  background: var(--main-color-terra-cotta);
+  font-weight:700;
+  font-size:31px;
+  color:var(--grayscale-white);
+  white-space:pre-line;
+  position:relative;
+  margin-left:20px;
+  margin-top:20px;
+}
+.brochure::after{
+  content:"";
+  background:url(../image/main_screen_3/CafeBrochure.svg) no-repeat 0,0;
+  display:block;
+  width:275px;
+  height:203px;
+  position:absolute;
+  top:0;
+  right:0;
+}
+.brochure::before{
+  content:"";
+  background:url(../image/main_screen_3/Arrow\(Stroke\).svg) no-repeat 0,0;
+  display:block;
+  width:100px;
+  height:100px;
+  position:absolute;
+  bottom:-20px;
+  left:15px;
+}
+.brochure a{
+  display:block;
+  padding-left:30px;
+  margin-top:-10px;
+}
+
+/* section 7 커피랩 섹션  */
 .coffee-lab-container{
  min-width:1440px;
  height:1192px;
- background:#FFFCF9;
+ background:var(--grayscale-white);
 }
 .coffee-lab{
   position:relative;
@@ -249,7 +213,7 @@ body {}
   font-size:46px;
 }
 .coffee-lab__brief{
-  width:449px;
+  width:455px;
   height:25px;
   margin:0 auto;
   margin-top:8px;
@@ -257,7 +221,6 @@ body {}
   line-height:25px;
   font-weight:700;
   font-size:18px;
-
 }
 .coffee-lab__brief::after{
   content:"";
@@ -265,19 +228,18 @@ body {}
   width:50px;
   height:10px;
   border:0;
-  border-top:1px solid black;
+  border-top:1px solid var(--grayscale-black);
   position:relative;
   top:50px;
   left:190px;
 }
-
 .coffee-lab__lab-menu{
   width: 692px;
   height: 692px;
   background:url(../image/image-png/front-image.png) no-repeat;
   position:absolute;
   top:287px;
-  left:120px;
+  left:15%;
   z-index:1;
   display:flex;
   flex-flow:column nowrap;
@@ -290,16 +252,15 @@ body {}
   background:url(../image/image-png/back-image.png) no-repeat;
   position:absolute;
   top:420px;
-  right:120px;
+  left:46%;
   display:flex;
   flex-flow:column nowrap;
   justify-content:flex-end;
   align-items:center;
 }
-
 .coffee-lab__lab-menu a,
 .coffee-lab__lab-barista a{
- color:#FFFCF9;
+ color:var(--grayscale-white);
  margin-bottom:150px;
  font-weight:700;
  font-size:32px;
@@ -310,12 +271,94 @@ body {}
   display:block;
   width:180px;
   margin-top:10px;
-  border-top:10px solid #FFFCF9;
+  border-top:10px solid var(--grayscale-white);
 }
 .coffee-lab__lab-barista a::after{
   content:"";
   display:block;
   width:220px;
   margin-top:10px;
-  border-top:10px solid #FFFCF9;
+  border-top:10px solid var(--grayscale-white);
+}
+
+/* section 9 매장찾기 섹션*/
+
+.find-store__container, 
+.find-store{
+  min-width:1440px;
+  height:420px;
+  background: radial-gradient(65.6% 264.49% at 59.55% 37.62%, rgba(40, 39, 37, 0.95) 0%, #282725 73.46%, #171615 100%);
+  position:relative;
+}
+
+.find-store__brief::after{
+  content:"";
+  background:url(../image/main_screen_9/PhotoBig.svg) no-repeat;
+  display:block;
+  width:400px;
+  height:420px;
+  position:absolute;
+  top:-150px;
+  left:-700px;
+}
+.find-store__brief::before{
+  content:"";
+  background:url(../image/main_screen_9/PhotoSmall.svg) no-repeat;
+  display:block;
+  width:700px;
+  height:420px;
+  position: absolute;
+  top:30px;
+  left:-450px;
+  z-index:1;
+}
+.find-store__brief{
+  position:absolute;
+  top:10px;
+  right:260px;
+  width:450px;
+  /* display:flex;
+  flex-flow:column; */
+  color:var(--grayscale-white);
+  white-space:pre-line;
+}
+.store-brief__title{
+  color:var(--grayscale-white);
+  font-weight: 400;
+  font-size:18px;
+  display:inline-block;
+  padding-bottom:10px;
+}
+.store-brief__title strong{
+  display:block;
+  font-weight: 700;
+  font-size:25px;
+  padding-bottom:4px;
+  width:430px;
+}
+.find-store__image{
+  background:url(../image/main_screen_9/CoffeeStore.svg) no-repeat 0,0;
+  width:152px;
+  height:127px;
+  position:absolute;
+  bottom:0;
+  right:320px;
+}
+.find-store__brief em{
+  font-weight:700;
+  white-space:pre;
+  font-style:normal;
+}
+
+.find-store__btn{
+  width:100px;
+  height:40px;
+  position:absolute;
+  bottom:50px;
+  right:530px;
+  border:2px solid var(--grayscale-white);
+  border-radius:3px;
+  text-align:center;
+  line-height: 35px;
+  color:var(--grayscale-white);
 }
