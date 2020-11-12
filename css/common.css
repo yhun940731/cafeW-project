@@ -1033,19 +1033,7 @@ body {}
   align-items: center;
   position:relative;
 }
-.contents-container::after{
-  content:"5";
-  display:block;
-  width:200px;
-  height:200px;
-  font-weight:200;
-  opacity:15%;
-  font-size:600px;
-  color:var(--grayscale-gold);
-  position:absolute;
-  left:540px;
-  top:-130px;
-}
+
 .contents-review {
   width: 743px;
   height: 400px;
