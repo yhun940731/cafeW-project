@@ -163,12 +163,14 @@ body {}
   /* 음료이미지 position: absolute;로 배치할 때 BFC로 인해 레이아웃 무너지므로 고정 height값 부여 */
   height: 600px;
   justify-content: space-between;
+  position: relative;
+  /* 더보기 버튼 배치 기준 */
 }
 
 /* 추천 메뉴 섹션 - text-box */
 .text-box {
   width: 400px;
-  margin: 0 auto;
+  margin: 0 0 0 119px;
   text-align: center;
 }
 
@@ -335,6 +337,10 @@ body {}
   font-size: 16px;
   font-weight: 700;
   margin-top: 40px;
+  /* 배치 */
+  position: absolute;
+  top: 441px;
+  left: 256px;
 }
 
 
