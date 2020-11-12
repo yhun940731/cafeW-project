@@ -1,6 +1,6 @@
 /* 커피 배경 이미지 */
 .sign-in-container {
-    background: url(../image/signin/Image\ 09.png) no-repeat;
+    background: url(../image/signin/Image09.png) no-repeat;
     background-size: cover;
 }
 
@@ -17,7 +17,6 @@
 /* 로그인 폼 영역 위치 및 크기 지정 */
 .sign-in {
     width: 742px;
-    height: 614px;
     margin: auto;
     padding: 20px 0;
     background: var(--grayscale-white) url(../image/signin/Barista.svg) no-repeat 100% 100%;
