@@ -17,7 +17,6 @@
 /* 로그인 폼 영역 위치 및 크기 지정 */
 .sign-in {
     width: 742px;
-    height: 614px;
     margin: auto;
     padding: 20px 0;
     background: var(--grayscale-white) url(../image/signin/Barista.svg) no-repeat 100% 100%;
