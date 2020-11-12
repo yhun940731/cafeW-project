@@ -87,7 +87,7 @@ body {}
 
 .sub-menu li {
   font-size: 1.5rem;
-  padding-bottom: 7px;
+  padding-bottom: 15px;
 }
 
 /* --------------------------------------------
@@ -103,7 +103,7 @@ body {}
     border: none;
     /* 배치 */
     position: fixed;
-    bottom: 34px;
+    bottom: 0;
     right: 30px;
     z-index: 4;
   }
@@ -906,7 +906,7 @@ body {}
   position: absolute;
   top: 45%;
   left: 48%;
-  background-color: var(--grayscale-white);
+  background: var(--grayscale-white) url(../image/main_screen_8/W.svg) no-repeat 50% 30%;
   box-shadow: 0px 0px 15px rgba(103, 48, 25, 0.3);
   border-radius: 50%;
   overflow: hidden;
@@ -1037,26 +1037,29 @@ body {}
   background-color:var(--grayscale-gold);
   justify-content: center;
   align-items: center;
-  position:relative;
-}
-.contents-container::after{
-  content:"5";
-  display:block;
-  width:200px;
-  height:200px;
-  font-weight:200;
-  opacity:15%;
-  font-size:600px;
-  color:var(--grayscale-gold);
-  position:absolute;
-  left:540px;
-  top:-130px;
+ 
 }
 .contents-review {
   width: 743px;
   height: 400px;
   background:var(--grayscale-black);
+  position: relative;
+  overflow:hidden;
 }
+
+.contents-review::after{
+  content:"5";
+  width:200px;
+  height:200px;
+  font-weight:100;
+  opacity:5%;
+  font-size:600px;
+  color:#B68C70;
+  position:absolute;
+  left:400px;
+  top:-220px;
+}
+
 .review-heading {
   color:var(--grayscale-white);
   height: 43px;
@@ -1069,6 +1072,7 @@ body {}
   font-size:24px;
   font-weight:700;
 }
+
 .review-heading::before{
   content:"";
   display:block;
@@ -1119,7 +1123,7 @@ body {}
   background:var(--grayscale-white);
   margin-left:20px;
   margin-top:-17px;
-  
+  position:relative;
 }
 .favorite-heading{
   padding-top:30px;
@@ -1132,7 +1136,7 @@ body {}
   justify-content:center;
   align-items:flex-start;
   flex-flow:column nowrap;
-  position:relative;
+ 
 }
 .favorite-list li{
   width:450px;
@@ -1158,32 +1162,32 @@ overflow:hidden;
 padding-top: 20px;
 }
 .up {
-  top:10px;
+  top:98px;
   right:20px;
   background:url(../image/main_screen_3/Increase.svg) no-repeat 0,0;
 }
 .new {
-  top:32px;
+  top:120px;
   right:15px;
   background:url(../image/main_screen_3/New.svg) no-repeat 0,0;
 }
 .down {
- top:54px;
+ top:142px;
  right:15px;
  background:url(../image/main_screen_3/decrease.svg) no-repeat 0,0;
 }
 .stop{
- top:76px;
+ top:164px;
  right:20px;
  background:url(../image/main_screen_3/minus.svg) no-repeat 0,0;
 }
 .favorite-more {
   background:url(../image/main_screen_3/Plus_button.svg) no-repeat 0,0;
-  width:100px;
-  height:100px;
+  width:20px;
+  height:20px;
   position: absolute;
-  top: 25px;
-  right: 95px;
+  top:36px;
+  right:30px;
 }
 
 /* 브로슈어 파트 */
@@ -1314,56 +1318,54 @@ padding-top: 20px;
 
 /* section 9 매장찾기 섹션*/
 
-.find-store__container, 
 .find-store{
-  min-width:1440px;
+  width: 100%;
   height:420px;
   background: radial-gradient(65.6% 264.49% at 59.55% 37.62%, rgba(40, 39, 37, 0.95) 0%, #282725 73.46%, #171615 100%);
   position:relative;
+  padding-right: 180px;
 }
 
 .find-store__brief::after{
   content:"";
   background:url(../image/main_screen_9/PhotoBig.svg) no-repeat;
   display:block;
-  width:400px;
-  height:420px;
+  width:380px;
+  height:380px;
   position:absolute;
-  top:-150px;
-  left:-700px;
+  bottom: 100px;
+  left:200px;
 }
 .find-store__brief::before{
   content:"";
   background:url(../image/main_screen_9/PhotoSmall.svg) no-repeat;
   display:block;
-  width:700px;
-  height:420px;
+  width:250px;
+  height:250px;
   position: absolute;
-  top:30px;
-  left:-450px;
+  top: 100px;
+  left: 500px;
   z-index:1;
 }
+
 .find-store__brief{
-  position:absolute;
-  top:10px;
-  right:260px;
+  float: right;
   width:450px;
-  /* display:flex;
-  flex-flow:column; */
   color:var(--grayscale-white);
   white-space:pre-line;
+  line-height: 1.5;
 }
 .store-brief__title{
   color:var(--grayscale-white);
   font-weight: 400;
-  font-size:18px;
+  font-size: 1.8rem;
   display:inline-block;
   padding-bottom:10px;
 }
 .store-brief__title strong{
   display:block;
   font-weight: 700;
-  font-size:25px;
+  font-size:2.5rem;
   padding-bottom:4px;
   width:430px;
 }
