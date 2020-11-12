@@ -1034,10 +1034,9 @@ body {}
   min-width: 1440px;
   height: 460px;
   display: flex;
-  background-color:var(--grayscale-gold);
+  background-color:var(--main-color-gold);
   justify-content: center;
   align-items: center;
- 
 }
 .contents-review {
   width: 743px;
@@ -1187,7 +1186,7 @@ padding-top: 20px;
   height:20px;
   position: absolute;
   top:36px;
-  right:30px;
+  right:20px;
 }
 
 /* 브로슈어 파트 */
@@ -1210,7 +1209,7 @@ padding-top: 20px;
   width:275px;
   height:203px;
   position:absolute;
-  top:0;
+  bottom:0;
   right:0;
 }
 .brochure::before{
@@ -1234,39 +1233,46 @@ padding-top: 20px;
  min-width:1440px;
  height:1192px;
  background:var(--grayscale-white);
+ margin-top: 30px;
+}
+/* em 폰트 스타일 초기화 */
+.coffee-lab-container em {
+  font-style: normal;
 }
 .coffee-lab{
   position:relative;
 }
 .coffee-lab__heading{
-  width:484px;
-  height:144px;
-  margin:0 auto;
+  margin:80px auto 5px;
   text-align:center;
   line-height:144px;
-  font-weight:700;
-  font-size:46px;
+  font-weight:300;
+  font-size:48px;
+  line-height: 67px;
+  letter-spacing: 5px;
+}
+.coffee-lab__heading em {
+  font-weight: 700;
 }
 .coffee-lab__brief{
-  width:455px;
-  height:25px;
-  margin:0 auto;
+  margin: 5px auto 0;
   margin-top:8px;
   text-align:center;
   line-height:25px;
-  font-weight:700;
+  font-weight:400;
   font-size:18px;
+  letter-spacing: 2px;
 }
-.coffee-lab__brief::after{
+.coffee-lab__brief em {
+  font-weight: 700;
+}
+.coffee-lab::after{
   content:"";
-  display:block;
-  width:50px;
-  height:10px;
-  border:0;
-  border-top:1px solid var(--grayscale-black);
-  position:relative;
-  top:50px;
-  left:190px;
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: var(--grayscale-black);
+  margin: 85px auto 0;
 }
 .coffee-lab__lab-menu{
   width: 692px;
@@ -1369,13 +1375,18 @@ padding-top: 20px;
   padding-bottom:4px;
   width:430px;
 }
-.find-store__image{
-  background:url(../image/main_screen_9/CoffeeStore.svg) no-repeat 0,0;
+.find-store::before {
+  content: "";
+  background: url(../image/main_screen_9/CoffeeStore.svg) no-repeat;
   width:152px;
   height:127px;
   position:absolute;
   bottom:0;
   right:320px;
+}
+.find-store {
+  background: radial-gradient(65.6% 264.49% at 59.55% 37.62%, rgba(40, 39, 37, 0.95) 0%, #282725 73.46%, #171615 100%);
+  position: relative;
 }
 .find-store__brief em{
   font-weight:700;
