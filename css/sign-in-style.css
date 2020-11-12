@@ -11,7 +11,7 @@
     backdrop-filter: blur(15px) grayscale(35%);
     width: 100%;
     height: 100%;
-    padding: 100px 350px;
+    padding: 100px;
 }
 
 /* 로그인 폼 영역 위치 및 크기 지정 */
