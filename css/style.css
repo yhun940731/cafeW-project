@@ -5,3 +5,4 @@
 @import url(./default.css); /*기본 스타일 정의*/
 @import url(./variable.css); /*색상변수 정의*/
 @import url(./sign-in-style.css); /*signIn html 정의*/
+@import url(./sign-up-style.css); /*signUp html 정의*/
