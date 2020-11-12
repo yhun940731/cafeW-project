@@ -1,33 +1,34 @@
-.sign-up-container{
+.sign-up-container {
     margin: 0 auto;
 }
 
-.sign-up{
+.sign-up {
     width: 742px;
-    height: 1534px;
     margin: 100px auto;
     color: var(--main-color-gold);
     border: 1px solid #CBC5BE;
 }
 
 /* 폼 헤더 */
-.sign-up__header{
+.sign-up__header {
     text-align: center;
     border-bottom: 1px solid var(--main-color-gold);
-    
+
 }
+
 .sign-up__header h2 {
     font-size: 3.2rem;
     font-weight: 700;
     margin: 0;
     padding-top: 25px;
 }
+
 .sign-up__header p {
     font-size: 1.6rem;
     font-weight: 400;
 }
 /* 폼 메인 */
-.sign-up__main{
+.sign-up__main {
     display: flex;
     flex-flow: column nowrap;
     padding: 165px 100px 50px 100px;
@@ -35,10 +36,11 @@
 }
 
 .sign-up__main label,
-.label-style{
+.label-style {
     font-weight: 700;
 }
-.sign-up__main input{
+
+.sign-up__main input {
     display: block;
     width: 100%;
     height: 34px;
@@ -48,10 +50,11 @@
 }
 
 /* 필수목록 별표 표시 */
-.fill-required{
+.fill-required {
     position: relative;
 }
-.fill-required::after{
+
+.fill-required::after {
     content: "";
     display: block;
     position: absolute;
@@ -63,43 +66,179 @@
 }
 
 /* 이름, 성별란 스타일 */
-.sign-up-form__name{
+.sign-up-form__name {
     display: inline-block;
-    width:40%;
+    width: 40%;
     margin-right: 10px;
 }
-.sign-up-form__sex{
+
+.sign-up-form__sex {
     display: inline-block;
     width: 30%;
     vertical-align: bottom;
 }
-.radio-sex{
+
+.radio-sex {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     margin-right: 40px;
 }
-.radio-sex input{
+
+.radio-sex input {
     width: 20px;
 }
 
 /* 생년월일 */
-.birth-container{
-    margin-top: 10px;
+.birth-container {
+    margin: 10px 0;
 }
 
-.birth-container select{
+.birth-container select {
     border: 1px solid var(--main-color-gold);
     border-radius: 3px;
     color: var(--main-color-gold);
     margin-right: 10px;
 }
-#birthYear{
+
+#birthYear {
     width: 133px;
 }
+
 #birthMonth,
 #birthDay,
-#birthCalender{
+#birthCalender {
     width: 66px;
+}
+
+.small-star::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: url(../image/signup/Star.svg) no-repeat;
+}
+
+/* 전화번호/닉네임*/
+.sign-up-form__Tel,
+.sign-up-form__nickname {
+    margin: 10px 0;
+}
+
+/* 인증방식 */
+.confirm-list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border: 1px solid var(--main-color-gold);
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 20px
+}
+
+.confirm-list li {
+    padding: 0 20px;
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-list li:first-child {
+    margin-top: 25px;
+    border-right: 1px solid #7d6f5d50;
+}
+
+.confirm-list figure {
+    margin: 0;
+}
+
+.confirm-list figcaption {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.confirm-list p {
+    font-size: 1.2rem;
+}
+
+.confirm-list a {
+    display: block;
+    width: 73px;
+    height: 27px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: var(--main-color-gold);
+    text-align: center;
+    color: var(--grayscale-white);
+}
+
+
+/* 레이블 폰트 관련 스타일 및 토글 바탕 만들기 */
+.info-save label {
+    position: relative;
+    left: 400px;
+    text-indent: -400px;
+    display: block;
+    cursor: pointer;
+    width: 34px;
+    height: 14px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    white-space: nowrap;
+    background: #CFCCC7;
+    border-radius: 25px;
+    opacity: 0.5;
+    color: var(--main-color-gold);
+    font-weight: 700;
+}
+
+/* 체크박스 골라서 안보이게함 */
+.info-save .info-input {
+    height: 0;
+    width: 0;
+}
+
+/* 가상요소로 토글 버튼 만들기 */
+.info-save label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    background: #CFCCC7;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    opacity: 1;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* 체크했을 경우 토글 바탕 상태 */
+.info-input:checked+label {
+    background: var(--main-color-gold);
+    opacity: 0.6;
+}
+
+/* 체크했을 경우 토글 버튼 상태 */
+.info-input:checked+label:after {
+    background: var(--main-color-gold);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    transform: translateX(100%);
+    opacity: 1;
+}
+
+/* 회원가입 폼 버튼 */
+.sign-up-button {
+    width: 100%;
+    height: 46px;
+    margin: 20px 0;
+    color: var(--grayscale-white);
+    background-color: var(--main-color-gold);
+    border: 1px solid var(--main-color-gold);
+    border-radius: 3px;
 }
