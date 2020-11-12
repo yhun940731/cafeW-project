@@ -10,7 +10,7 @@ body {}
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   color: var(--grayscale-white);
   background-color: var(--grayscale-black);
   border-bottom: 1px solid var(--grayscale-white-border);
@@ -92,6 +92,42 @@ body {}
 
 /* --------------------------------------------
   * 메인 콘텐츠 섹션 공통 */
+  .app-main {
+    position: relative;
+  }
+  /* 공지사항 */
+  .notice-info {
+    background-color: rgba(226,119,98,.8);
+    backdrop-filter: blur(2px);
+    width: 601px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid var(--grayscale-white);
+    font-size: 16px;
+    /* 배치 */
+    position: absolute;
+    top: 506px;
+    left: 420px;
+    z-index: 3;
+    /* .app-header의 z-index는 5 */
+    /* flex container */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .notice-info__brief {
+    background-color: forestgreen;
+    margin: 0 0 0 75px;
+    width: 330px;
+  }
+  .notice-info time {
+    background-color: greenyellow;
+  }
+  .button-close {
+    margin-right: 20px;
+  }
+
 /* 추천 메뉴 섹션 */
 /* text-box와 image-box를 flex로 가로 배치함 */
 .recommend-beverage {
@@ -102,13 +138,14 @@ body {}
   min-width: 1440px;
   /* 음료이미지 position: absolute;로 배치할 때 BFC로 인해 레이아웃 무너지므로 고정 height값 부여 */
   height: 600px;
-  position: relative;
-  /* 더보기 버튼 배치 기준 */
+  justify-content: space-between;
 }
 
 /* 추천 메뉴 섹션 - text-box */
 .text-box {
-  width: 40%;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .recommend-beverage__text {
@@ -116,7 +153,6 @@ body {}
   font-size: 26px;
   font-weight: 400;
   line-height: 1;
-  text-align: center;
   margin: 0;
 }
 
@@ -260,23 +296,21 @@ body {}
 
 /* 추천 메뉴 섹션 - 자세히 보기 */
 .recommend-beverage__more-info {
-  position: absolute;
-  /* 배치 기준 section.recommend-beverage */
-  left: 227px;
-  top: 461px;
+  display: inline-block;
   /* 버튼 모양 꾸미기 */
   width: 128px;
-  height: 36px;
+  height: 44px;
   border-radius: 5px;
   border: 2px solid var(--main-color-terra-cotta);
   /* text 수평 정렬 */
   text-align: center;
   /* line-height trick으로 text 수직 정렬 */
-  line-height: 36px;
+  line-height: 44px;
   /* text 꾸미기 */
   color: var(--main-color-terra-cotta);
   font-size: 16px;
   font-weight: 700;
+  margin-top: 40px;
 }
 
 
@@ -284,6 +318,7 @@ body {}
   .slide-container {
     position: relative;
     overflow: hidden;
+    width: 100%;
   }
   /* 각 섹션 기본 디자인 */
   .slide-container section.is-active {
@@ -319,7 +354,8 @@ body {}
   }
   .euid-class-heading {
     left: 830px;
-    width: 800px;
+    width: 100%;
+    min-width: 1440px;
   }
   /* 탭 디자인 */
   .tab a {
@@ -669,7 +705,7 @@ body {}
   height: 852px;
 }
 .various-menu {
-  background: url(../image/image-png/background4.png) no-repeat 0 0 / auto 100%;
+  background: url(../image/image-png/background4.png) no-repeat 0 0 / cover;
   display: flex;
   flex-flow: row nowrap;
 }
