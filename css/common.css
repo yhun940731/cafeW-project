@@ -95,6 +95,18 @@ body {}
   .app-main {
     position: relative;
   }
+  /* 공통 위로가기 버튼 */
+  .button-goToTop {
+    /* 디자인 */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    /* 배치 */
+    position: fixed;
+    bottom: 34px;
+    right: 30px;
+    z-index: 4;
+  }
   /* 공지사항 */
   .notice-info {
     backdrop-filter: blur(2px);
@@ -107,8 +119,8 @@ body {}
     line-height: 22px;
     color: var(--grayscale-white);
     /* 배치 */
-    position: absolute;
-    top: 506px;
+    position: fixed;
+    bottom: 34px;
     left: 420px;
     z-index: 3;
     /* .app-header의 z-index는 5 */
