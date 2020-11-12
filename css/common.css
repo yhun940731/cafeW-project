@@ -1,6 +1,3 @@
-/* 본문 내 헤더, 메인 콘텐츠, 푸터 배치를 위한 body 레이아웃 */
-body {}
-
 /* --------------------------------------------
   * 헤더 디자인 */
 .app-header {
@@ -129,7 +126,7 @@ body {}
     flex-flow: row nowrap;
     align-items: center;
     /* 확성기 아이콘 */
-    background: rgba(226,119,98,.8) url(../image/main_screen_1/sound_button.svg) no-repeat 30px 50%;
+    background: rgba(226,119,98,.8) url(../image/notice/sound_button.svg) no-repeat 30px 50%;
   }
   .notice-info__brief {
     margin: 0 0 0 75px;
@@ -149,7 +146,7 @@ body {}
     width: 21px;
     height: 21px;
     border: 0;
-    background: url(../image/main_screen_2/Closebutton.svg) no-repeat 50% 50% / 100%;
+    background: url(../image/notice/Closebutton.svg) no-repeat 50% 50% / 100%;
   }
 
 /* 추천 메뉴 섹션 */
@@ -400,14 +397,14 @@ body {}
     font-weight: 700;
   }
   .multicampus-class-heading a {
-    background: var(--grayscale-white) url(../image/main_screen_1/ChevronUp.svg) no-repeat 793px 47%;
+    background: var(--grayscale-white) url(../image/main_screen_2/ChevronUp.svg) no-repeat 793px 47%;
     /* 탭에 화살표 아이콘 삽입 */
     color: var(--grayscale-black);
     padding-left: 624px;
     padding-right: 64px;
   }
   .euid-class-heading a {
-    background: var(--grayscale-black) url(../image/main_screen_1/ChevronDown.svg) no-repeat 568px 47%;
+    background: var(--grayscale-black) url(../image/main_screen_2/ChevronDown.svg) no-repeat 568px 47%;
     /* 탭에 화살표 아이콘 삽입 */
     color: var(--grayscale-white);
     padding-left: 353px;
@@ -624,11 +621,212 @@ body {}
       padding: 20px 0 0 0;
     }
     .btn-slide__item.is-active {
-      background: url(../image/main_screen_2/indicator_\(active\).svg) no-repeat 0 50% / 100%;
+      background: url(../image/main_screen_2/indicator_active.svg) no-repeat 0 50% / 100%;
       /* padding trick */
       width: 38px;
       padding: 20px 0 0 0;
     }
+
+/* section 3 디자인 */
+
+/* 강의리뷰 파트 */
+.contents-container {
+  min-width: 1440px;
+  height: 460px;
+  display: flex;
+  background-color:var(--main-color-gold);
+  justify-content: center;
+  align-items: center;
+}
+.contents-review {
+  width: 743px;
+  height: 400px;
+  background:var(--grayscale-black);
+  position: relative;
+  overflow:hidden;
+}
+
+.contents-review::after{
+  content:"5";
+  width:200px;
+  height:200px;
+  font-weight:100;
+  opacity:5%;
+  font-size:600px;
+  color:#B68C70;
+  position:absolute;
+  left:400px;
+  top:-220px;
+}
+
+.review-heading {
+  color:var(--grayscale-white);
+  height: 43px;
+  width: 350px;
+  margin:0;
+  padding:0;
+  border:0;
+  margin-top:90px;
+  font-size:24px;
+  font-weight:700;
+}
+
+.review-heading::before{
+  content:"";
+  display:block;
+  width:40px;
+  height:10px;
+  border:0;
+  border-top:1px solid var(--grayscale-white);
+  position:relative;
+  top:-30px;
+}
+
+.review-brief {
+  color:var(--grayscale-white);
+  margin-left:91px;
+  margin-top:10px;
+  margin-right:167px;
+  font-weight:400;
+  color:var(--grayscale-white);
+}
+.review-brief p{
+  font-size :14px;
+  font-weight:300;
+}
+
+.review-brief footer {
+  margin-top: 14px;
+}
+.review-brief__rating::before{
+  content: "";
+  display: inline-block;
+  width: 110px;
+  height: 20px;
+  background: url(../image/main_screen_3/star_rating.svg) repeat;
+}
+.contents-review__change-btn {
+  background:url(../image/main_screen_3/play_button.svg) no-repeat 0,0;
+  display:block;
+  width:100px;
+  height:100px;
+  border:0;
+  margin-left:30px;
+}
+
+/* 인기순위 파트 */
+.favorite-contents {
+  width:459px;
+  height: 220px;
+  background:var(--grayscale-white);
+  margin-left:20px;
+  margin-top:-17px;
+  position:relative;
+}
+.favorite-heading{
+  padding-top:30px;
+  margin-left:24px;
+  color:var(--main-color-gold);
+}
+.favorite-list{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-flow:column nowrap;
+ 
+}
+.favorite-list li{
+  width:450px;
+  height:22px;
+  color:var(--main-color-gold);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+} 
+.favorite-list a {
+  display: block;
+  margin:10px 0;
+}
+.up,
+.stop,
+.down,
+.new {
+position:absolute;
+right: 0;
+width: 28px; 
+height: 20px;
+overflow:hidden;
+padding-top: 20px;
+}
+.up {
+  top:98px;
+  right:20px;
+  background:url(../image/main_screen_3/Increase.svg) no-repeat 0,0;
+}
+.new {
+  top:120px;
+  right:15px;
+  background:url(../image/main_screen_3/New.svg) no-repeat 0,0;
+}
+.down {
+ top:142px;
+ right:15px;
+ background:url(../image/main_screen_3/decrease.svg) no-repeat 0,0;
+}
+.stop{
+ top:164px;
+ right:20px;
+ background:url(../image/main_screen_3/minus.svg) no-repeat 0,0;
+}
+.favorite-more {
+  background:url(../image/main_screen_3/Plus_button.svg) no-repeat 0,0;
+  width:20px;
+  height:20px;
+  position: absolute;
+  top:36px;
+  right:20px;
+}
+
+/* 브로슈어 파트 */
+.brochure{
+  width:459px;
+  height: 160px;
+  background: var(--main-color-terra-cotta);
+  font-weight:700;
+  font-size:31px;
+  color:var(--grayscale-white);
+  white-space:pre-line;
+  position:relative;
+  margin-left:20px;
+  margin-top:20px;
+}
+.brochure::after{
+  content:"";
+  background:url(../image/main_screen_3/CafeBrochure.svg) no-repeat 0,0;
+  display:block;
+  width:275px;
+  height:203px;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+.brochure::before{
+  content:"";
+  background:url(../image/main_screen_3/ArrowStroke.svg) no-repeat 0,0;
+  display:block;
+  width:100px;
+  height:100px;
+  position:absolute;
+  bottom:-20px;
+  left:15px;
+}
+.brochure a{
+  display:block;
+  padding-left:30px;
+  margin-top:-10px;
+}
+
 
 /* 유튜브 영상 섹션 #4 */
 /* 섹션 배경 이미지 추가 */
@@ -853,6 +1051,100 @@ body {}
   height: 482px;
 }
 
+/* section 7 커피랩 섹션  */
+.coffee-lab-container{
+  min-width:1440px;
+  height:1192px;
+  background:var(--grayscale-white);
+  margin-top: 30px;
+ }
+ /* em 폰트 스타일 초기화 */
+ .coffee-lab-container em {
+   font-style: normal;
+ }
+ .coffee-lab{
+   position:relative;
+ }
+ .coffee-lab__heading{
+   margin:80px auto 5px;
+   text-align:center;
+   line-height:144px;
+   font-weight:300;
+   font-size:48px;
+   line-height: 67px;
+   letter-spacing: 5px;
+ }
+ .coffee-lab__heading em {
+   font-weight: 700;
+ }
+ .coffee-lab__brief{
+   margin: 5px auto 0;
+   margin-top:8px;
+   text-align:center;
+   line-height:25px;
+   font-weight:400;
+   font-size:18px;
+   letter-spacing: 2px;
+ }
+ .coffee-lab__brief em {
+   font-weight: 700;
+ }
+ .coffee-lab::after{
+   content:"";
+   display: block;
+   width: 70px;
+   height: 1px;
+   background-color: var(--grayscale-black);
+   margin: 85px auto 0;
+ }
+ .coffee-lab__lab-menu{
+   width: 692px;
+   height: 692px;
+   background:url(../image/image-png/front-image.png) no-repeat;
+   position:absolute;
+   top:287px;
+   left:15%;
+   z-index:1;
+   display:flex;
+   flex-flow:column nowrap;
+   justify-content:flex-end;
+   align-items:center;
+ }
+ .coffee-lab__lab-barista{
+   width:692px;
+   height:692px;
+   background:url(../image/image-png/back-image.png) no-repeat;
+   position:absolute;
+   top:420px;
+   left:46%;
+   display:flex;
+   flex-flow:column nowrap;
+   justify-content:flex-end;
+   align-items:center;
+ }
+ .coffee-lab__lab-menu a,
+ .coffee-lab__lab-barista a{
+  color:var(--grayscale-white);
+  margin-bottom:150px;
+  font-weight:700;
+  font-size:32px;
+  text-align: center;
+ }
+ .coffee-lab__lab-menu a::after{
+   content:"";
+   display:block;
+   width:180px;
+   margin-top:10px;
+   border-top:10px solid var(--grayscale-white);
+ }
+ .coffee-lab__lab-barista a::after{
+   content:"";
+   display:block;
+   width:220px;
+   margin-top:10px;
+   border-top:10px solid var(--grayscale-white);
+ }
+
 /* 이듬 블랜디드 러닝 소개 섹션 #8 */
 /* 배경 적용 및 전체 폰트 색상 적용 */
 .curriculum-info {
@@ -963,365 +1255,6 @@ body {}
 }
 
 
-/* --------------------------------------------
-  * 푸터 디자인 */
-/* flex로 수직 정렬 */
-.app-footer {
-  background-color: var(--grayscale-black);
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  color: var(--grayscale-white);
-}
-
-.app-footer__guide-list {
-  background-color: var(--grayscale-black);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  height: 82px;
-  width: 100%;
-  border-top: 1px solid rgba(255, 252, 249, .2);
-  border-bottom: 1px solid rgba(255, 252, 249, .2);
-}
-
-.app-footer__guide-list a {
-  margin: 0 30px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 82px;
-  /* 수직 정렬 line-height trick */
-  white-space: nowrap;
-  opacity: .6;
-}
-
-/* 푸터 메뉴 키보드 포커스 및 마우스 오버 시 text opacity 변경 */
-.app-footer__guide-list a:focus,
-.app-footer__guide-list a:hover {
-  opacity: 1;
-}
-
-.app-footer__brand {
-  width: 77px;
-  height: 90px;
-  margin: 40px 0;
-}
-
-.app-footer__address {
-  text-align: center;
-  font-style: normal;
-  opacity: .6;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 21px;
-  margin-bottom: 30px;
-}
-
-.copyright {
-  margin-bottom: 60px;
-  opacity: .6;
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 21px;
-}
-
-
-
-/* section 3 디자인 */
-
-/* 강의리뷰 파트 */
-.contents-container {
-  min-width: 1440px;
-  height: 460px;
-  display: flex;
-  background-color:var(--main-color-gold);
-  justify-content: center;
-  align-items: center;
-}
-.contents-review {
-  width: 743px;
-  height: 400px;
-  background:var(--grayscale-black);
-  position: relative;
-  overflow:hidden;
-}
-
-.contents-review::after{
-  content:"5";
-  width:200px;
-  height:200px;
-  font-weight:100;
-  opacity:5%;
-  font-size:600px;
-  color:#B68C70;
-  position:absolute;
-  left:400px;
-  top:-220px;
-}
-
-.review-heading {
-  color:var(--grayscale-white);
-  height: 43px;
-  width: 350px;
-  margin:0;
-  padding:0;
-  border:0;
-  margin-left:91px;
-  margin-top:90px;
-  font-size:24px;
-  font-weight:700;
-}
-
-.review-heading::before{
-  content:"";
-  display:block;
-  width:40px;
-  height:10px;
-  border:0;
-  border-top:1px solid var(--grayscale-white);
-  position:relative;
-  top:-30px;
-}
-
-.review-brief {
-  color:var(--grayscale-white);
-  margin-left:91px;
-  margin-top:10px;
-  margin-right:167px;
-  font-weight:400;
-  color:var(--grayscale-white);
-}
-.review-brief p{
-  font-size :14px;
-  font-weight:300;
-}
-
-.review-brief footer {
-  margin-top: 14px;
-}
-.review-brief__rating::before{
-  content: "";
-  display: inline-block;
-  width: 110px;
-  height: 20px;
-  background: url(../image/main_screen_2/star_rating.svg) repeat;
-}
-.contents-review__change-btn {
-  background:url(../image/main_screen_3/play_button.svg) no-repeat 0,0;
-  display:block;
-  width:100px;
-  height:100px;
-  border:0;
-  margin-left:30px;
-}
-
-/* 인기순위 파트 */
-.favorite-contents {
-  width:459px;
-  height: 220px;
-  background:var(--grayscale-white);
-  margin-left:20px;
-  margin-top:-17px;
-  position:relative;
-}
-.favorite-heading{
-  padding-top:30px;
-  margin-left:24px;
-  color:var(--main-color-gold);
-}
-.favorite-list{
-  margin-top:24px;
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  flex-flow:column nowrap;
- 
-}
-.favorite-list li{
-  width:450px;
-  height:22px;
-  color:var(--main-color-gold);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-} 
-.favorite-list a {
-  display: block;
-  margin:10px 0;
-}
-.up,
-.stop,
-.down,
-.new {
-position:absolute;
-right: 0;
-width: 28px; 
-height: 20px;
-overflow:hidden;
-padding-top: 20px;
-}
-.up {
-  top:98px;
-  right:20px;
-  background:url(../image/main_screen_3/Increase.svg) no-repeat 0,0;
-}
-.new {
-  top:120px;
-  right:15px;
-  background:url(../image/main_screen_3/New.svg) no-repeat 0,0;
-}
-.down {
- top:142px;
- right:15px;
- background:url(../image/main_screen_3/decrease.svg) no-repeat 0,0;
-}
-.stop{
- top:164px;
- right:20px;
- background:url(../image/main_screen_3/minus.svg) no-repeat 0,0;
-}
-.favorite-more {
-  background:url(../image/main_screen_3/Plus_button.svg) no-repeat 0,0;
-  width:20px;
-  height:20px;
-  position: absolute;
-  top:36px;
-  right:20px;
-}
-
-/* 브로슈어 파트 */
-.brochure{
-  width:459px;
-  height: 160px;
-  background: var(--main-color-terra-cotta);
-  font-weight:700;
-  font-size:31px;
-  color:var(--grayscale-white);
-  white-space:pre-line;
-  position:relative;
-  margin-left:20px;
-  margin-top:20px;
-}
-.brochure::after{
-  content:"";
-  background:url(../image/main_screen_3/CafeBrochure.svg) no-repeat 0,0;
-  display:block;
-  width:275px;
-  height:203px;
-  position:absolute;
-  bottom:0;
-  right:0;
-}
-.brochure::before{
-  content:"";
-  background:url(../image/main_screen_3/Arrow\(Stroke\).svg) no-repeat 0,0;
-  display:block;
-  width:100px;
-  height:100px;
-  position:absolute;
-  bottom:-20px;
-  left:15px;
-}
-.brochure a{
-  display:block;
-  padding-left:30px;
-  margin-top:-10px;
-}
-
-/* section 7 커피랩 섹션  */
-.coffee-lab-container{
- min-width:1440px;
- height:1192px;
- background:var(--grayscale-white);
- margin-top: 30px;
-}
-/* em 폰트 스타일 초기화 */
-.coffee-lab-container em {
-  font-style: normal;
-}
-.coffee-lab{
-  position:relative;
-}
-.coffee-lab__heading{
-  margin:80px auto 5px;
-  text-align:center;
-  line-height:144px;
-  font-weight:300;
-  font-size:48px;
-  line-height: 67px;
-  letter-spacing: 5px;
-}
-.coffee-lab__heading em {
-  font-weight: 700;
-}
-.coffee-lab__brief{
-  margin: 5px auto 0;
-  margin-top:8px;
-  text-align:center;
-  line-height:25px;
-  font-weight:400;
-  font-size:18px;
-  letter-spacing: 2px;
-}
-.coffee-lab__brief em {
-  font-weight: 700;
-}
-.coffee-lab::after{
-  content:"";
-  display: block;
-  width: 70px;
-  height: 1px;
-  background-color: var(--grayscale-black);
-  margin: 85px auto 0;
-}
-.coffee-lab__lab-menu{
-  width: 692px;
-  height: 692px;
-  background:url(../image/image-png/front-image.png) no-repeat;
-  position:absolute;
-  top:287px;
-  left:15%;
-  z-index:1;
-  display:flex;
-  flex-flow:column nowrap;
-  justify-content:flex-end;
-  align-items:center;
-}
-.coffee-lab__lab-barista{
-  width:692px;
-  height:692px;
-  background:url(../image/image-png/back-image.png) no-repeat;
-  position:absolute;
-  top:420px;
-  left:46%;
-  display:flex;
-  flex-flow:column nowrap;
-  justify-content:flex-end;
-  align-items:center;
-}
-.coffee-lab__lab-menu a,
-.coffee-lab__lab-barista a{
- color:var(--grayscale-white);
- margin-bottom:150px;
- font-weight:700;
- font-size:32px;
- text-align: center;
-}
-.coffee-lab__lab-menu a::after{
-  content:"";
-  display:block;
-  width:180px;
-  margin-top:10px;
-  border-top:10px solid var(--grayscale-white);
-}
-.coffee-lab__lab-barista a::after{
-  content:"";
-  display:block;
-  width:220px;
-  margin-top:10px;
-  border-top:10px solid var(--grayscale-white);
-}
-
 /* section 9 매장찾기 섹션*/
 
 .find-store{
@@ -1405,4 +1338,66 @@ padding-top: 20px;
   text-align:center;
   line-height: 35px;
   color:var(--grayscale-white);
+}
+
+/* --------------------------------------------
+  * 푸터 디자인 */
+/* flex로 수직 정렬 */
+.app-footer {
+  background-color: var(--grayscale-black);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: var(--grayscale-white);
+}
+
+.app-footer__guide-list {
+  background-color: var(--grayscale-black);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 82px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 252, 249, .2);
+  border-bottom: 1px solid rgba(255, 252, 249, .2);
+}
+
+.app-footer__guide-list a {
+  margin: 0 30px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 82px;
+  /* 수직 정렬 line-height trick */
+  white-space: nowrap;
+  opacity: .6;
+}
+
+/* 푸터 메뉴 키보드 포커스 및 마우스 오버 시 text opacity 변경 */
+.app-footer__guide-list a:focus,
+.app-footer__guide-list a:hover {
+  opacity: 1;
+}
+
+.app-footer__brand {
+  width: 77px;
+  height: 90px;
+  margin: 40px 0;
+}
+
+.app-footer__address {
+  text-align: center;
+  font-style: normal;
+  opacity: .6;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+
+.copyright {
+  margin-bottom: 60px;
+  opacity: .6;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 21px;
 }
