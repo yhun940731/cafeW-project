@@ -247,8 +247,6 @@
 }
 
 /* 이용약관 - 내용 */
-.sign-up-form__consent {
-}
 .sign-up-form__consent small:nth-child(2) {
     background-color: var(--grayscale-white);
     /* text box로 만들기 */
