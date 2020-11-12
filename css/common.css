@@ -97,13 +97,15 @@ body {}
   }
   /* 공지사항 */
   .notice-info {
-    background-color: rgba(226,119,98,.8);
     backdrop-filter: blur(2px);
     width: 601px;
     height: 60px;
     border-radius: 100px;
     border: 1px solid var(--grayscale-white);
+    /* 글꼴 디자인 */
     font-size: 16px;
+    line-height: 22px;
+    color: var(--grayscale-white);
     /* 배치 */
     position: absolute;
     top: 506px;
@@ -113,19 +115,29 @@ body {}
     /* flex container */
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     align-items: center;
+    /* 확성기 아이콘 */
+    background: rgba(226,119,98,.8) url(../image/main_screen_1/sound_button.svg) no-repeat 30px 50%;
   }
   .notice-info__brief {
-    background-color: forestgreen;
     margin: 0 0 0 75px;
     width: 330px;
   }
   .notice-info time {
-    background-color: greenyellow;
+    width: 90px;
+    text-align: right;
+    margin-right: 40px;
+    /* 글꼴 디자인 */
+    font-size: 14px;
+    line-height: 20px;
   }
   .button-close {
+    cursor: pointer;
     margin-right: 20px;
+    width: 21px;
+    height: 21px;
+    border: 0;
+    background: url(../image/main_screen_2/Closebutton.svg) no-repeat 50% 50% / 100%;
   }
 
 /* 추천 메뉴 섹션 */
