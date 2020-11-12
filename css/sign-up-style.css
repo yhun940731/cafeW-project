@@ -95,9 +95,11 @@
     color: var(--main-color-gold);
     margin-right: 10px;
 }
-[name="year"]#birthInfo{
+#birthYear{
     width: 133px;
 }
-#birthInfo{
+#birthMonth,
+#birthDay,
+#birthCalender{
     width: 66px;
 }
