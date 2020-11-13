@@ -38,3 +38,5 @@ Version Control System (Git + GitHub)
 - @moripark32 박세리
 - @ahnanne 안예인
 - @yhun940731 최용훈
+
+[발표자료](https://slides.com/yeinahn-1/deck)
