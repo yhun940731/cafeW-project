@@ -32,3 +32,4 @@ Semantic Markup (HTML5 + WAI-ARIA)
 
 Version Control System (Git + GitHub)
 ![image](https://user-images.githubusercontent.com/56425514/99020654-68e99400-25a2-11eb-81df-382661fe56b0.png)
+![image](https://user-images.githubusercontent.com/56425514/99020841-b403a700-25a2-11eb-9bcc-353df5c1cdcb.png)
