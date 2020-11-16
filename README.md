@@ -35,8 +35,8 @@ Version Control System (Git + GitHub)
 ![image](https://user-images.githubusercontent.com/56425514/99020841-b403a700-25a2-11eb-9bcc-353df5c1cdcb.png)
 
 ## 참여인원
-- @moripark32 박세리
-- @ahnanne 안예인
 - @yhun940731 최용훈
+- @ahnanne 안예인
+- @moripark32 박세리
 
 [발표자료](https://slides.com/yeinahn-1/deck)
